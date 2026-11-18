@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | KAS FOOD HOUSE</title>
+
+    <meta name="description"
+        content="Contact KAS FOOD HOUSE for food orders, deliveries, reservations and enquiries. Enjoy delicious fast food and traditional Zambian meals.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+         PAGE LOADER
+    ====================================== -->
+
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">KAS<span>.</span></div>
+            <p>Preparing Something Delicious...</p>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- =====================================
+         TOP BAR
+    ====================================== -->
+
+    <div class="top-bar">
+        <div class="container top-bar-content">
+
+            <div class="top-bar-left">
+                <span>
+                    <i class="fas fa-clock"></i>
+                    Fresh Food, Fresh Moments
+                </span>
+            </div>
+
+            <div class="top-bar-right">
+                <a href="#contactDetails">
+                    <i class="fas fa-location-dot"></i>
+                    Contact Information
+                </a>
+
+                <a href="menu.html">
+                    <i class="fas fa-utensils"></i>
+                    Explore Menu
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- =====================================
+         NAVIGATION
+    ====================================== -->
+
+    <header class="navbar">
+
+        <div class="container nav-container">
+
+            <a href="index.html" class="logo">
+                KAS<span>FOOD</span>
+                <small>HOUSE</small>
+            </a>
+
+            <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation"
+                aria-expanded="false">
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html">Home</a>
+
+                <a href="menu.html">Menu</a>
+
+                <a href="traditional-food.html">
+                    Traditional Food
+                </a>
+
+                <a href="index.html#about">About</a>
+
+                <a href="contact.html" class="active">
+                    Contact
+                </a>
+
+                <a href="login.html">Login</a>
+
+                <a href="cart.html" class="nav-cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    Cart
+                    <span id="cartCount">0</span>
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <!-- =====================================
+         CONTACT HERO
+    ====================================== -->
+
+    <section class="contact-hero">
+
+        <div class="contact-hero-overlay"></div>
+
+        <div class="contact-hero-content">
+
+            <span class="section-label">
+                WE WOULD LOVE TO HEAR FROM YOU
+            </span>
+
+            <h1>
+                Get In <span>Touch</span>
+            </h1>
+
+            <p>
+                Questions about our meals, delivery or services?
+                Our team is ready to help you.
+            </p>
+
+            <div class="contact-breadcrumb">
+                <a href="index.html">Home</a>
+                <i class="fas fa-angle-right"></i>
+                <span>Contact</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================
+         CONTACT INFORMATION CARDS
+    ====================================== -->
+
+    <section class="contact-info-section" id="contactDetails">
+
+        <div class="container">
+
+            <div class="contact-section-heading reveal">
+
+                <span class="section-label">
+                    CONTACT INFORMATION
+                </span>
+
+                <h2>
+                    Let's Talk About <span>Food</span>
+                </h2>
+
+                <p>
+                    Reach out to us for orders, deliveries,
+                    questions or general enquiries.
+                </p>
+
+            </div>
+
+            <div class="contact-info-grid">
+
+                <!-- PHONE -->
+
+                <div class="contact-info-card reveal">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+
+                    <h3>Call Us</h3>
+
+                    <p>
+                        Speak directly with our team
+                        for assistance and orders.
+                    </p>
+
+                    <a href="#" id="contactPhone">
+                        Phone number coming soon
+                    </a>
+
+                </div>
+
+                <!-- EMAIL -->
+
+                <div class="contact-info-card reveal">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+
+                    <h3>Email Us</h3>
+
+                    <p>
+                        Send us your questions,
+                        suggestions or feedback.
+                    </p>
+
+                    <a href="#" id="contactEmail">
+                        Email address coming soon
+                    </a>
+
+                </div>
+
+                <!-- LOCATION -->
+
+                <div class="contact-info-card reveal">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+
+                    <h3>Our Location</h3>
+
+                    <p>
+                        We look forward to serving you.
+                    </p>
+
+                    <span id="contactAddress">
+                        Location details coming soon
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================
+         CONTACT FORM SECTION
+    ====================================== -->
+
+    <section class="contact-main-section">
+
+        <div class="container">
+
+            <div class="contact-main-grid">
+
+                <!-- CONTACT FORM -->
+
+                <div class="contact-form-wrapper reveal-left">
+
+                    <span class="section-label">
+                        SEND US A MESSAGE
+                    </span>
+
+                    <h2>
+                        How Can We <span>Help?</span>
+                    </h2>
+
+                    <p class="contact-form-description">
+                        Complete the form below and tell us
+                        what you need. We appreciate your feedback.
+                    </p>
+
+                    <form id="contactForm">
+
+                        <div class="contact-form-row">
+
+                            <div class="form-group">
+
+                                <label for="contactName">
+                                    Full Name *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="contactName"
+                                    name="name"
+                                    placeholder="Enter your full name"
+                                    required
+                                    minlength="2">
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label for="contactPhoneInput">
+                                    Phone Number *
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="contactPhoneInput"
+                                    name="phone"
+                                    placeholder="097XXXXXXX"
+                                    pattern="[0-9+ ]{9,16}"
+                                    required>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="contactEmailInput">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="contactEmailInput"
+                                name="email"
+                                placeholder="example@email.com">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="contactSubject">
+                                Subject *
+                            </label>
+
+                            <select
+                                id="contactSubject"
+                                name="subject"
+                                required>
+
+                                <option value="">
+                                    Select a subject
+                                </option>
+
+                                <option value="Food Order">
+                                    Food Order
+                                </option>
+
+                                <option value="Delivery Enquiry">
+                                    Delivery Enquiry
+                                </option>
+
+                                <option value="Menu Enquiry">
+                                    Menu Enquiry
+                                </option>
+
+                                <option value="Feedback">
+                                    Feedback
+                                </option>
+
+                                <option value="Complaint">
+                                    Complaint
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="contactMessage">
+                                Your Message *
+                            </label>
+
+                            <textarea
+                                id="contactMessage"
+                                name="message"
+                                rows="6"
+                                placeholder="Write your message here..."
+                                required
+                                minlength="5"></textarea>
+
+                        </div>
+
+                        <div class="contact-form-message"
+                            id="contactFormMessage"
+                            role="status"
+                            aria-live="polite">
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn-primary contact-submit-btn">
+
+                            <span>Send Message</span>
+
+                            <i class="fas fa-paper-plane"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <!-- CONTACT SIDE INFORMATION -->
+
+                <div class="contact-side-wrapper reveal-right">
+
+                    <div class="contact-side-card">
+
+                        <span class="section-label">
+                            KAS FOOD HOUSE
+                        </span>
+
+                        <h3>
+                            Good Food.
+                            <span>Great Moments.</span>
+                        </h3>
+
+                        <p>
+                            We believe great food brings people
+                            together. Whether you are craving
+                            traditional Zambian meals or modern
+                            fast food, we are here to serve you.
+                        </p>
+
+                        <div class="contact-side-divider"></div>
+
+                        <h4>Why Contact Us?</h4>
+
+                        <ul class="contact-benefits">
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Food and menu enquiries
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Delivery information
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Catering enquiries
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Customer feedback
+                            </li>
+
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                Special meal requests
+                            </li>
+
+                        </ul>
+
+                        <div class="contact-socials">
+
+                            <h4>Follow KAS FOOD HOUSE</h4>
+
+                            <div class="contact-social-links">
+
+                                <a href="#"
+                                    aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+
+                                <a href="#"
+                                    aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+
+                                <a href="#"
+                                    aria-label="TikTok">
+                                    <i class="fab fa-tiktok"></i>
+                                </a>
+
+                                <a href="#"
+                                    aria-label="WhatsApp">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-delivery-card">
+
+                        <div class="delivery-card-icon">
+                            <i class="fas fa-motorcycle"></i>
+                        </div>
+
+                        <div>
+                            <h4>Need Food Delivered?</h4>
+
+                            <p>
+                                Explore our menu and place
+                                your order online.
+                            </p>
+
+                            <a href="menu.html">
+                                Order Food
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================
+         OPENING HOURS
+    ====================================== -->
+
+    <section class="contact-hours-section">
+
+        <div class="container">
+
+            <div class="contact-hours-grid">
+
+                <div class="contact-hours-content reveal-left">
+
+                    <span class="section-label">
+                        WHEN TO FIND US
+                    </span>
+
+                    <h2>
+                        Our Opening <span>Hours</span>
+                    </h2>
+
+                    <p>
+                        We are preparing delicious moments
+                        for you. Check our opening hours
+                        before visiting.
+                    </p>
+
+                    <div class="contact-hours-list">
+
+                        <div class="hours-row">
+                            <span>Monday - Friday</span>
+                            <strong>Hours to be confirmed</strong>
+                        </div>
+
+                        <div class="hours-row">
+                            <span>Saturday</span>
+                            <strong>Hours to be confirmed</strong>
+                        </div>
+
+                        <div class="hours-row">
+                            <span>Sunday</span>
+                            <strong>Hours to be confirmed</strong>
+                        </div>
+
+                        <div class="hours-row">
+                            <span>Public Holidays</span>
+                            <strong>Please contact us</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="contact-hours-image reveal-right">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900"
+                        alt="Restaurant dining experience"
+                        loading="lazy">
+
+                    <div class="hours-image-overlay">
+
+                        <i class="fas fa-utensils"></i>
+
+                        <h3>
+                            Freshly Prepared.
+                            Always Delicious.
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================
+         LOCATION / MAP
+    ====================================== -->
+
+    <section class="contact-location-section">
+
+        <div class="container">
+
+            <div class="contact-section-heading reveal">
+
+                <span class="section-label">
+                    FIND KAS FOOD HOUSE
+                </span>
+
+                <h2>
+                    Visit <span>Our Location</span>
+                </h2>
+
+                <p>
+                    Find us on the map and plan your visit.
+                    Our exact location will be added here.
+                </p>
+
+            </div>
+
+            <div class="contact-map-placeholder">
+
+                <div class="map-placeholder-content">
+
+                    <i class="fas fa-map-marked-alt"></i>
+
+                    <h3>Our Location</h3>
+
+                    <p>
+                        Google Maps location will be connected
+                        once the restaurant address is confirmed.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================
+         FINAL CTA
+    ====================================== -->
+
+    <section class="contact-cta">
+
+        <div class="container">
+
+            <div class="contact-cta-content reveal">
+
+                <span class="section-label">
+                    READY TO ENJOY SOMETHING DELICIOUS?
+                </span>
+
+                <h2>
+                    Your Next Favourite Meal
+                    <span>Is Waiting.</span>
+                </h2>
+
+                <p>
+                    Explore our delicious menu and discover
+                    the taste of KAS FOOD HOUSE.
+                </p>
+
+                <div class="contact-cta-buttons">
+
+                    <a href="menu.html" class="btn-primary">
+                        Explore Our Menu
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <a href="traditional-food.html"
+                        class="btn-secondary">
+                        Traditional Food
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-about">
+
+                    <a href="index.html" class="logo">
+                        KAS<span>FOOD</span>
+                        <small>HOUSE</small>
+                    </a>
+
+                    <p>
+                        Bringing people together through
+                        delicious fast food and traditional
+                        Zambian meals.
+                    </p>
+
+                    <div class="footer-socials">
+
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="footer-links">
+
+                    <h3>Quick Links</h3>
+
+                    <a href="index.html">Home</a>
+                    <a href="menu.html">Our Menu</a>
+                    <a href="traditional-food.html">
+                        Traditional Food
+                    </a>
+                    <a href="index.html#about">About Us</a>
+                    <a href="contact.html">Contact</a>
+
+                </div>
+
+                <div class="footer-links">
+
+                    <h3>Customer Service</h3>
+
+                    <a href="contact.html">Contact Us</a>
+                    <a href="cart.html">Shopping Cart</a>
+                    <a href="checkout.html">Checkout</a>
+                    <a href="login.html">My Account</a>
+
+                </div>
+
+                <div class="footer-newsletter">
+
+                    <h3>Stay Connected</h3>
+
+                    <p>
+                        Subscribe to receive updates,
+                        special offers and food news.
+                    </p>
+
+                    <form id="newsletterForm">
+
+                        <input
+                            type="email"
+                            id="newsletterEmail"
+                            placeholder="Your email address"
+                            required>
+
+                        <button type="submit"
+                            aria-label="Subscribe">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; <span id="currentYear"></span>
+                    KAS FOOD HOUSE.
+                    All Rights Reserved.
+                </p>
+
+                <p>
+                    Made with
+                    <i class="fas fa-heart"></i>
+                    for Food Lovers.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- =====================================
+         BACK TO TOP
+    ====================================== -->
+
+    <button id="backToTop"
+        class="back-to-top"
+        aria-label="Back to top">
+
+        <i class="fas fa-arrow-up"></i>
+
+    </button>
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="app.js"></script>
+    <script src="animations.js"></script>
+    <script src="contact.js"></script>
+
+</body>
+
+</html>

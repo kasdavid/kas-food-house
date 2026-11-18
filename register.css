@@ -1,0 +1,700 @@
+/* =========================================
+   KAS FOOD HOUSE - REGISTER PAGE
+========================================= */
+
+.register-page {
+    min-height: 100vh;
+    background: #101010;
+    color: #fff;
+}
+
+
+/* =========================================
+   AUTH CONTAINER
+========================================= */
+
+.register-page .auth-container {
+    min-height: calc(100vh - 85px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   LEFT VISUAL PANEL
+========================================= */
+
+.register-page .register-visual {
+    position: relative;
+    min-height: 750px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 70px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.92),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1400&q=85");
+
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.register-page .register-visual::before {
+    content: "KAS FOOD HOUSE";
+
+    position: absolute;
+    bottom: 35px;
+    left: 30px;
+
+    font-size: clamp(35px, 5vw, 75px);
+    font-weight: 800;
+
+    color: rgba(255, 255, 255, 0.06);
+
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.register-page .auth-visual-content {
+    position: relative;
+    z-index: 2;
+    max-width: 520px;
+}
+
+.register-page .auth-visual-tag {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    background: rgba(255, 90, 31, 0.15);
+    border: 1px solid rgba(255, 90, 31, 0.5);
+
+    color: #ffb52e;
+
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+.register-page .auth-visual-content h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1.15;
+
+    margin-bottom: 25px;
+}
+
+.register-page .auth-visual-content h1 span {
+    display: block;
+    color: #ff5a1f;
+}
+
+.register-page .auth-visual-content p {
+    color: #d0d0d0;
+
+    font-size: 15px;
+    line-height: 1.9;
+
+    max-width: 460px;
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   VISUAL FEATURES
+========================================= */
+
+.register-page .auth-visual-features {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.register-page .auth-feature {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    color: #eee;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.register-page .auth-feature i {
+    color: #ffb52e;
+    font-size: 18px;
+}
+
+
+/* =========================================
+   REGISTRATION FORM PANEL
+========================================= */
+
+.register-page .auth-form-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 55px 35px;
+
+    background: #141414;
+}
+
+.register-page .auth-form-wrapper {
+    width: 100%;
+    max-width: 490px;
+
+    margin: auto;
+}
+
+.register-page .auth-heading {
+    margin-bottom: 28px;
+}
+
+.register-page .auth-heading .small-title {
+    color: #ffb52e;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.register-page .auth-heading h2 {
+    font-family: "Playfair Display", serif;
+
+    font-size: 34px;
+    color: #fff;
+
+    margin-bottom: 12px;
+}
+
+.register-page .auth-heading > p:last-child {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   FORM GROUPS
+========================================= */
+
+.register-page .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.register-page .auth-form-group {
+    width: 100%;
+}
+
+.register-page .auth-form-group label {
+    display: block;
+
+    color: #ddd;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    margin-bottom: 9px;
+}
+
+.register-page .auth-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.register-page .auth-input-wrapper > i:first-child {
+    position: absolute;
+    left: 16px;
+
+    color: #ffb52e;
+    font-size: 15px;
+
+    pointer-events: none;
+}
+
+.register-page .auth-input-wrapper input {
+    width: 100%;
+    height: 53px;
+
+    padding: 0 48px;
+
+    background: #202020;
+
+    border: 1px solid #333;
+    border-radius: 9px;
+
+    color: #fff;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+.register-page .auth-input-wrapper input::placeholder {
+    color: #777;
+}
+
+.register-page .auth-input-wrapper input:focus {
+    border-color: #ff5a1f;
+
+    background: #242424;
+
+    box-shadow: 0 0 0 3px rgba(255, 90, 31, 0.12);
+}
+
+
+/* =========================================
+   PASSWORD VISIBILITY BUTTON
+========================================= */
+
+.register-page .auth-password-toggle {
+    position: absolute;
+    right: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    background: transparent;
+
+    color: #999;
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.register-page .auth-password-toggle:hover {
+    color: #ffb52e;
+}
+
+
+/* =========================================
+   PASSWORD STRENGTH
+========================================= */
+
+.register-page .password-strength {
+    width: 100%;
+    height: 5px;
+
+    background: #333;
+
+    border-radius: 20px;
+    overflow: hidden;
+
+    margin-top: 12px;
+}
+
+.register-page .password-strength-bar {
+    width: 0%;
+    height: 100%;
+
+    background: #ff5a1f;
+
+    border-radius: 20px;
+
+    transition: width 0.3s ease,
+                background 0.3s ease;
+}
+
+
+/* =========================================
+   TERMS AND CONDITIONS
+========================================= */
+
+.register-page .auth-options {
+    margin-top: 3px;
+}
+
+.register-page .auth-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    color: #aaa;
+
+    font-size: 12px;
+    line-height: 1.7;
+
+    cursor: pointer;
+}
+
+.register-page .auth-checkbox input {
+    accent-color: #ff5a1f;
+
+    width: 15px;
+    height: 15px;
+
+    margin-top: 3px;
+
+    flex-shrink: 0;
+}
+
+.register-page .auth-checkbox a {
+    color: #ffb52e;
+    text-decoration: none;
+}
+
+.register-page .auth-checkbox a:hover {
+    color: #ff5a1f;
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   REGISTER BUTTON
+========================================= */
+
+.register-page .auth-submit-btn {
+    width: 100%;
+    min-height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: linear-gradient(
+        135deg,
+        #ff5a1f,
+        #e84312
+    );
+
+    color: #fff;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(255, 90, 31, 0.2);
+
+    transition: 0.3s ease;
+}
+
+.register-page .auth-submit-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 12px 30px rgba(255, 90, 31, 0.35);
+}
+
+.register-page .auth-submit-btn:active {
+    transform: scale(0.98);
+}
+
+.register-page .auth-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* =========================================
+   GOOGLE BUTTON
+========================================= */
+
+.register-page .auth-google-btn {
+    width: 100%;
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    background: #202020;
+
+    border: 1px solid #383838;
+    border-radius: 9px;
+
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.register-page .auth-google-btn i {
+    color: #ffb52e;
+    font-size: 17px;
+}
+
+.register-page .auth-google-btn:hover {
+    background: #292929;
+    border-color: #ff5a1f;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   DIVIDER
+========================================= */
+
+.register-page .auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    color: #777;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin: 25px 0;
+}
+
+.register-page .auth-divider::before,
+.register-page .auth-divider::after {
+    content: "";
+
+    flex: 1;
+    height: 1px;
+
+    background: #333;
+}
+
+
+/* =========================================
+   LOGIN LINK
+========================================= */
+
+.register-page .auth-switch {
+    text-align: center;
+
+    color: #999;
+
+    font-size: 13px;
+
+    margin-top: 27px;
+}
+
+.register-page .auth-switch a {
+    color: #ffb52e;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    margin-left: 5px;
+
+    transition: 0.3s ease;
+}
+
+.register-page .auth-switch a:hover {
+    color: #ff5a1f;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.register-page .auth-message {
+    display: none;
+
+    padding: 13px 15px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+    line-height: 1.6;
+
+    margin-bottom: 18px;
+}
+
+.register-page .auth-message.success {
+    display: block;
+
+    color: #7be29a;
+
+    background: rgba(39, 199, 123, 0.1);
+
+    border: 1px solid rgba(39, 199, 123, 0.3);
+}
+
+.register-page .auth-message.error {
+    display: block;
+
+    color: #ff8585;
+
+    background: rgba(255, 70, 70, 0.1);
+
+    border: 1px solid rgba(255, 70, 70, 0.3);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.register-page .auth-footer {
+    text-align: center;
+
+    border-top: 1px solid #292929;
+
+    padding-top: 22px;
+    margin-top: 30px;
+}
+
+.register-page .auth-footer p {
+    color: #777;
+    font-size: 11px;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .register-page .register-visual {
+        padding: 45px;
+    }
+
+    .register-page .auth-form-panel {
+        padding: 45px 25px;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .register-page .auth-container {
+        grid-template-columns: 1fr;
+    }
+
+    .register-page .register-visual {
+        min-height: 350px;
+        padding: 45px 30px;
+    }
+
+    .register-page .auth-visual-content {
+        max-width: 650px;
+    }
+
+    .register-page .auth-visual-content h1 {
+        font-size: 42px;
+    }
+
+    .register-page .auth-form-panel {
+        padding: 50px 25px;
+    }
+
+    .register-page .auth-form-wrapper {
+        max-width: 550px;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .register-page .register-visual {
+        min-height: 310px;
+        padding: 35px 22px;
+    }
+
+    .register-page .auth-visual-content h1 {
+        font-size: 34px;
+    }
+
+    .register-page .auth-visual-content p {
+        font-size: 13px;
+    }
+
+    .register-page .auth-visual-features {
+        gap: 13px;
+    }
+
+    .register-page .auth-feature {
+        font-size: 12px;
+    }
+
+    .register-page .auth-form-panel {
+        padding: 40px 20px;
+    }
+
+    .register-page .auth-heading h2 {
+        font-size: 27px;
+    }
+
+    .register-page .auth-input-wrapper input {
+        height: 50px;
+        font-size: 12px;
+    }
+
+    .register-page .auth-submit-btn {
+        min-height: 51px;
+    }
+
+}
+
+
+@media (max-width: 360px) {
+
+    .register-page .auth-heading h2 {
+        font-size: 23px;
+    }
+
+    .register-page .register-visual {
+        padding: 30px 17px;
+    }
+
+    .register-page .auth-form-panel {
+        padding: 35px 15px;
+    }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .register-page *,
+    .register-page *::before,
+    .register-page *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+}

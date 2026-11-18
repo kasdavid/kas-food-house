@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | KAS FOOD HOUSE</title>
+
+    <meta name="description"
+        content="Create your KAS FOOD HOUSE account and enjoy delicious fast food and traditional Zambian meals.">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="auth.css">
+
+</head>
+
+
+<body class="auth-page register-page">
+
+
+    <!-- LOADER -->
+    <div id="loader">
+
+        <div class="loader-content">
+
+            <div class="loader-logo">
+                <i class="fas fa-utensils"></i>
+            </div>
+
+            <h2>KAS FOOD HOUSE</h2>
+
+            <p>Preparing something delicious...</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- HEADER -->
+    <header class="auth-header">
+
+        <a href="index.html" class="auth-logo">
+
+            <span class="auth-logo-icon">
+                <i class="fas fa-utensils"></i>
+            </span>
+
+            <span>
+                KAS <span>FOOD HOUSE</span>
+            </span>
+
+        </a>
+
+
+        <a href="index.html" class="auth-back-link">
+
+            <i class="fas fa-arrow-left"></i>
+
+            Back to Home
+
+        </a>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main class="auth-container">
+
+
+        <!-- LEFT IMAGE PANEL -->
+        <section class="auth-visual register-visual">
+
+            <div class="auth-visual-content">
+
+                <span class="auth-visual-tag">
+                    JOIN OUR FOOD FAMILY
+                </span>
+
+                <h1>
+                    Delicious Moments
+                    <span>Start Here.</span>
+                </h1>
+
+                <p>
+                    Create your account and enjoy an amazing food
+                    experience. Discover delicious fast food,
+                    fresh meals and authentic traditional
+                    Zambian dishes.
+                </p>
+
+
+                <div class="auth-visual-features">
+
+                    <div class="auth-feature">
+
+                        <i class="fas fa-check-circle"></i>
+
+                        <span>Easy Online Ordering</span>
+
+                    </div>
+
+
+                    <div class="auth-feature">
+
+                        <i class="fas fa-check-circle"></i>
+
+                        <span>Traditional Zambian Food</span>
+
+                    </div>
+
+
+                    <div class="auth-feature">
+
+                        <i class="fas fa-check-circle"></i>
+
+                        <span>Track Your Orders</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- REGISTRATION FORM -->
+        <section class="auth-form-panel">
+
+            <div class="auth-form-wrapper">
+
+
+                <!-- HEADING -->
+                <div class="auth-heading">
+
+                    <p class="small-title">
+                        CREATE YOUR ACCOUNT
+                    </p>
+
+                    <h2>Join KAS FOOD HOUSE</h2>
+
+                    <p>
+                        Register today and make your next meal
+                        experience special.
+                    </p>
+
+                </div>
+
+
+                <!-- MESSAGE -->
+                <div class="auth-message"
+                    id="registerMessage"
+                    role="status"
+                    aria-live="polite">
+                </div>
+
+
+
+                <!-- REGISTER FORM -->
+                <form id="registerForm" class="auth-form">
+
+
+                    <!-- FULL NAME -->
+                    <div class="auth-form-group">
+
+                        <label for="registerName">
+                            Full Name
+                        </label>
+
+                        <div class="auth-input-wrapper">
+
+                            <i class="fas fa-user"></i>
+
+                            <input
+                                type="text"
+                                id="registerName"
+                                name="name"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                minlength="2"
+                                maxlength="80"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+                    <div class="auth-form-group">
+
+                        <label for="registerEmail">
+                            Email Address
+                        </label>
+
+                        <div class="auth-input-wrapper">
+
+                            <i class="fas fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="registerEmail"
+                                name="email"
+                                placeholder="Enter your email address"
+                                autocomplete="email"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PHONE -->
+                    <div class="auth-form-group">
+
+                        <label for="registerPhone">
+                            Phone Number
+                        </label>
+
+                        <div class="auth-input-wrapper">
+
+                            <i class="fas fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="registerPhone"
+                                name="phone"
+                                placeholder="e.g. 097XXXXXXX"
+                                autocomplete="tel"
+                                minlength="9"
+                                maxlength="15"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- PASSWORD -->
+                    <div class="auth-form-group">
+
+                        <label for="registerPassword">
+                            Password
+                        </label>
+
+                        <div class="auth-input-wrapper">
+
+                            <i class="fas fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="registerPassword"
+                                name="password"
+                                placeholder="Create a password"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required>
+
+                            <button
+                                type="button"
+                                class="auth-password-toggle"
+                                id="toggleRegisterPassword"
+                                aria-label="Show password">
+
+                                <i class="fas fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- PASSWORD STRENGTH -->
+                        <div class="password-strength">
+
+                            <div
+                                class="password-strength-bar"
+                                id="passwordStrengthBar">
+                            </div>
+
+                        </div>
+
+                        <small id="passwordStrengthText"
+                            style="display:block;color:#999;margin-top:8px;font-size:11px;">
+
+                            Password strength
+
+                        </small>
+
+                    </div>
+
+
+
+                    <!-- CONFIRM PASSWORD -->
+                    <div class="auth-form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <div class="auth-input-wrapper">
+
+                            <i class="fas fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                minlength="8"
+                                required>
+
+                            <button
+                                type="button"
+                                class="auth-password-toggle"
+                                id="toggleConfirmPassword"
+                                aria-label="Show confirm password">
+
+                                <i class="fas fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TERMS -->
+                    <div class="auth-options">
+
+                        <label class="auth-checkbox">
+
+                            <input
+                                type="checkbox"
+                                id="termsAgreement"
+                                required>
+
+                            <span>
+                                I agree to the
+                                <a href="terms.html"
+                                    class="auth-forgot-link">
+                                    Terms & Conditions
+                                </a>
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- REGISTER BUTTON -->
+                    <button
+                        type="submit"
+                        class="auth-submit-btn"
+                        id="registerButton">
+
+                        <i class="fas fa-user-plus"></i>
+
+                        Create My Account
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- DIVIDER -->
+                <div class="auth-divider">
+                    OR REGISTER WITH
+                </div>
+
+
+
+                <!-- GOOGLE REGISTER -->
+                <button
+                    type="button"
+                    class="auth-google-btn"
+                    id="googleRegisterBtn">
+
+                    <i class="fab fa-google"></i>
+
+                    Continue with Google
+
+                </button>
+
+
+
+                <!-- LOGIN LINK -->
+                <div class="auth-switch">
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Login Here
+                    </a>
+
+                </div>
+
+
+
+                <!-- FOOTER -->
+                <div class="auth-footer">
+
+                    <p>
+                        &copy; <span id="registerYear"></span>
+                        KAS FOOD HOUSE.
+                        All Rights Reserved.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- PASSWORD VISIBILITY AND YEAR -->
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const year = document.getElementById("registerYear");
+
+            if (year) {
+                year.textContent = new Date().getFullYear();
+            }
+
+
+            function setupPasswordToggle(buttonId, inputId) {
+
+                const button = document.getElementById(buttonId);
+
+                const input = document.getElementById(inputId);
+
+                if (!button || !input) return;
+
+                button.addEventListener("click", function () {
+
+                    const show = input.type === "password";
+
+                    input.type = show ? "text" : "password";
+
+                    const icon = button.querySelector("i");
+
+                    if (icon) {
+
+                        icon.classList.toggle("fa-eye", !show);
+
+                        icon.classList.toggle("fa-eye-slash", show);
+
+                    }
+
+                    button.setAttribute(
+                        "aria-label",
+                        show ? "Hide password" : "Show password"
+                    );
+
+                });
+
+            }
+
+
+            setupPasswordToggle(
+                "toggleRegisterPassword",
+                "registerPassword"
+            );
+
+            setupPasswordToggle(
+                "toggleConfirmPassword",
+                "confirmPassword"
+            );
+
+
+            // PASSWORD STRENGTH
+
+            const password = document.getElementById("registerPassword");
+
+            const strengthBar =
+                document.getElementById("passwordStrengthBar");
+
+            const strengthText =
+                document.getElementById("passwordStrengthText");
+
+
+            if (password && strengthBar && strengthText) {
+
+                password.addEventListener("input", function () {
+
+                    const value = password.value;
+
+                    let score = 0;
+
+                    if (value.length >= 8) score++;
+
+                    if (/[A-Z]/.test(value)) score++;
+
+                    if (/[a-z]/.test(value)) score++;
+
+                    if (/[0-9]/.test(value)) score++;
+
+                    if (/[^A-Za-z0-9]/.test(value)) score++;
+
+
+                    const levels = [
+
+                        {
+                            width: "0%",
+                            text: "Enter a password",
+                            color: "#444"
+                        },
+
+                        {
+                            width: "20%",
+                            text: "Very weak",
+                            color: "#ff5b5b"
+                        },
+
+                        {
+                            width: "40%",
+                            text: "Weak",
+                            color: "#ff8c42"
+                        },
+
+                        {
+                            width: "60%",
+                            text: "Fair",
+                            color: "#ffc857"
+                        },
+
+                        {
+                            width: "80%",
+                            text: "Strong",
+                            color: "#72c76b"
+                        },
+
+                        {
+                            width: "100%",
+                            text: "Very strong",
+                            color: "#27c77b"
+                        }
+
+                    ];
+
+
+                    const level = levels[score];
+
+                    strengthBar.style.width = level.width;
+
+                    strengthBar.style.background = level.color;
+
+                    strengthText.textContent = level.text;
+
+                    strengthText.style.color = level.color;
+
+                });
+
+            }
+
+        });
+
+    </script>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="app.js"></script>
+    <script src="animations.js"></script>
+
+    <script type="module" src="register.js"></script>
+
+
+</body>
+
+</html>

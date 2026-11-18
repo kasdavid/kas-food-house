@@ -1,0 +1,862 @@
+/* =====================================================
+   KAS FOOD HOUSE
+   RESPONSIVE DESIGN
+   MOBILE | TABLET | DESKTOP
+===================================================== */
+
+/* ================= LARGE LAPTOPS ================= */
+
+@media (max-width: 1200px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .nav-menu {
+        gap: 17px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .hero-container {
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 62px;
+    }
+
+    .traditional-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ================= TABLETS ================= */
+
+@media (max-width: 992px) {
+
+    .section-padding {
+        padding: 80px 0;
+    }
+
+    /* HEADER */
+
+    .navbar {
+        min-height: 75px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 43px;
+        height: 43px;
+        border-radius: 10px;
+        background: #252525;
+        color: white;
+        font-size: 20px;
+        order: 3;
+        transition: 0.3s ease;
+    }
+
+    .menu-toggle:hover {
+        background: var(--primary);
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #111;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 15px 5%;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-15px);
+        transition: 0.3s ease;
+    }
+
+    .nav-menu.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-menu a {
+        width: 100%;
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+        font-size: 14px;
+    }
+
+    .nav-menu a::after {
+        display: none;
+    }
+
+    .mobile-login {
+        display: block;
+    }
+
+    .nav-actions {
+        margin-left: auto;
+    }
+
+    .login-btn {
+        display: none;
+    }
+
+    /* HERO */
+
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        padding-top: 70px;
+        padding-bottom: 90px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero-content > p {
+        font-size: 13px;
+    }
+
+    .hero-image {
+        min-height: 350px;
+    }
+
+    .hero-image > img {
+        height: 350px;
+    }
+
+    .hero-features {
+        gap: 13px;
+    }
+
+    .hero-features div {
+        font-size: 10px;
+    }
+
+    .hero-floating-card {
+        left: -10px;
+        bottom: 25px;
+    }
+
+    .hero-discount {
+        right: -5px;
+        width: 75px;
+        height: 75px;
+    }
+
+    .hero-discount strong {
+        font-size: 20px;
+    }
+
+    /* CATEGORIES */
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-card {
+        height: 300px;
+    }
+
+    /* TRADITIONAL FOOD */
+
+    .traditional-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* PROMO */
+
+    .promo-container {
+        gap: 35px;
+    }
+
+    .promo-image img {
+        height: 320px;
+    }
+
+    /* POPULAR */
+
+    .popular-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .popular-card:last-child {
+        grid-column: span 2;
+    }
+
+    /* ABOUT */
+
+    .about-container {
+        gap: 40px;
+    }
+
+    .about-image > img {
+        height: 400px;
+    }
+
+    /* NEWSLETTER */
+
+    .newsletter-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .newsletter-form {
+        width: 100%;
+    }
+
+}
+
+/* ================= MOBILE PHONES ================= */
+
+@media (max-width: 768px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .section-padding {
+        padding: 65px 0;
+    }
+
+    /* TOP BAR */
+
+    .top-bar {
+        padding: 8px 0;
+    }
+
+    .top-bar-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .top-bar-content p {
+        font-size: 10px;
+    }
+
+    .top-bar-content p:last-child {
+        display: none;
+    }
+
+    /* HEADER */
+
+    .navbar {
+        min-height: 68px;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+        gap: 8px;
+    }
+
+    .logo-icon {
+        width: 39px;
+        height: 39px;
+        font-size: 19px;
+        border-radius: 11px;
+    }
+
+    .logo small {
+        font-size: 8px;
+    }
+
+    .nav-actions {
+        gap: 9px;
+    }
+
+    .cart-btn {
+        width: 39px;
+        height: 39px;
+    }
+
+    .menu-toggle {
+        width: 39px;
+        height: 39px;
+        font-size: 18px;
+    }
+
+    .nav-menu {
+        max-height: 75vh;
+        overflow-y: auto;
+    }
+
+    /* HERO */
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding-top: 55px;
+        padding-bottom: 85px;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin: auto;
+    }
+
+    .hero-label {
+        font-size: 9px;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 10vw, 55px);
+        line-height: 1.18;
+    }
+
+    .hero-content > p {
+        font-size: 13px;
+        margin: 0 auto 25px;
+        max-width: 480px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .btn {
+        padding: 13px 17px;
+        font-size: 11px;
+    }
+
+    .hero-features {
+        justify-content: center;
+        gap: 14px;
+        margin-top: 30px;
+    }
+
+    .hero-features div {
+        font-size: 9px;
+    }
+
+    .hero-image {
+        width: 90%;
+        margin: auto;
+        min-height: 320px;
+    }
+
+    .hero-image > img {
+        height: 320px;
+        border-radius: 30px;
+    }
+
+    .hero-floating-card {
+        left: -15px;
+        bottom: 20px;
+        padding: 10px 13px;
+    }
+
+    .hero-floating-card > i {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    .hero-floating-card strong {
+        font-size: 10px;
+    }
+
+    .hero-floating-card small {
+        font-size: 9px;
+    }
+
+    .hero-discount {
+        right: -12px;
+        top: -15px;
+        width: 70px;
+        height: 70px;
+    }
+
+    .hero-scroll {
+        display: none;
+    }
+
+    /* MARQUEE */
+
+    .marquee-section {
+        padding: 14px 0;
+    }
+
+    .marquee-track {
+        gap: 25px;
+    }
+
+    .marquee-track span {
+        font-size: 10px;
+    }
+
+    /* SECTION HEADINGS */
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2,
+    .about-content h2 {
+        font-size: 32px;
+    }
+
+    .section-heading p {
+        font-size: 12px;
+    }
+
+    /* CATEGORIES */
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .category-card {
+        height: 230px;
+        border-radius: 11px;
+    }
+
+    .category-info {
+        left: 13px;
+        right: 13px;
+        bottom: 14px;
+    }
+
+    .category-info h3 {
+        font-size: 15px;
+    }
+
+    .category-info span {
+        font-size: 9px;
+    }
+
+    .category-info > i {
+        width: 29px;
+        height: 29px;
+        font-size: 10px;
+    }
+
+    /* TRADITIONAL FOOD */
+
+    .traditional-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .food-card {
+        border-radius: 11px;
+    }
+
+    .food-image {
+        height: 150px;
+    }
+
+    .food-badge {
+        font-size: 7px;
+        top: 8px;
+        left: 8px;
+        padding: 5px 7px;
+    }
+
+    .food-details {
+        padding: 12px;
+    }
+
+    .food-category {
+        font-size: 8px;
+    }
+
+    .food-details h3 {
+        font-size: 14px;
+    }
+
+    .food-details > p {
+        font-size: 10px;
+        line-height: 1.6;
+        min-height: 48px;
+    }
+
+    .food-card-bottom {
+        margin-top: 12px;
+        padding-top: 10px;
+    }
+
+    .price {
+        font-size: 15px;
+    }
+
+    .food-order-btn {
+        width: 31px;
+        height: 31px;
+        font-size: 11px;
+    }
+
+    .section-center {
+        margin-top: 30px;
+    }
+
+    /* PROMO */
+
+    .promo-section {
+        padding: 55px 0;
+    }
+
+    .promo-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .promo-content {
+        text-align: center;
+    }
+
+    .promo-content h2 {
+        font-size: 37px;
+    }
+
+    .promo-content > p {
+        font-size: 12px;
+        margin: 0 auto 25px;
+    }
+
+    .promo-image img {
+        height: 250px;
+        transform: none;
+        border-radius: 14px;
+    }
+
+    /* POPULAR */
+
+    .popular-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .popular-card:last-child {
+        grid-column: auto;
+    }
+
+    .popular-card {
+        border-radius: 11px;
+    }
+
+    .popular-card > img {
+        height: 155px;
+    }
+
+    .popular-info {
+        padding: 13px;
+    }
+
+    .popular-info > span {
+        font-size: 7px;
+    }
+
+    .popular-info h3 {
+        font-size: 15px;
+    }
+
+    .popular-info p {
+        font-size: 10px;
+        line-height: 1.6;
+    }
+
+    .btn-small {
+        padding: 9px 12px;
+        font-size: 10px;
+    }
+
+    /* ABOUT */
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .about-image > img {
+        height: 300px;
+        border-radius: 13px;
+    }
+
+    .about-experience {
+        right: -5px;
+        bottom: -20px;
+        padding: 12px 17px;
+    }
+
+    .about-experience strong {
+        font-size: 12px;
+    }
+
+    .about-experience span {
+        font-size: 9px;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .about-content > p {
+        font-size: 12px;
+    }
+
+    /* NEWSLETTER */
+
+    .newsletter-section {
+        padding: 50px 0;
+    }
+
+    .newsletter-container {
+        text-align: center;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .newsletter-container h2 {
+        font-size: 27px;
+    }
+
+    .newsletter-container p {
+        font-size: 11px;
+    }
+
+    .newsletter-form {
+        padding: 5px;
+    }
+
+    .newsletter-form input {
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    .newsletter-form button {
+        padding: 10px;
+        font-size: 10px;
+    }
+
+    /* FOOTER */
+
+    .main-footer {
+        padding-top: 55px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px 20px;
+        padding-bottom: 40px;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+    }
+
+    .footer-brand > p {
+        max-width: 100%;
+        font-size: 11px;
+    }
+
+    .footer-links h3,
+    .footer-contact h3 {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    .footer-links a {
+        font-size: 10px;
+    }
+
+    .footer-contact p {
+        font-size: 9px;
+        word-break: break-word;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        font-size: 9px;
+        padding: 18px 5%;
+    }
+
+    /* FLOATING BUTTONS */
+
+    .whatsapp-float {
+        width: 48px;
+        height: 48px;
+        font-size: 25px;
+        bottom: 18px;
+        right: 17px;
+    }
+
+    .back-to-top {
+        width: 38px;
+        height: 38px;
+        right: 22px;
+        bottom: 77px;
+    }
+
+}
+
+/* ================= SMALL PHONES ================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 93%;
+    }
+
+    .section-padding {
+        padding: 55px 0;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 290px;
+    }
+
+    .hero-image {
+        width: 95%;
+        min-height: 260px;
+    }
+
+    .hero-image > img {
+        height: 260px;
+    }
+
+    .hero-features {
+        gap: 10px;
+    }
+
+    .hero-features div {
+        font-size: 8px;
+    }
+
+    .category-card {
+        height: 190px;
+    }
+
+    .category-info h3 {
+        font-size: 13px;
+    }
+
+    .food-image {
+        height: 125px;
+    }
+
+    .food-details {
+        padding: 10px;
+    }
+
+    .food-details h3 {
+        font-size: 12px;
+    }
+
+    .food-details > p {
+        font-size: 9px;
+    }
+
+    .popular-card > img {
+        height: 125px;
+    }
+
+    .popular-info h3 {
+        font-size: 13px;
+    }
+
+    .popular-info p {
+        font-size: 9px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        background: transparent;
+        gap: 10px;
+    }
+
+    .newsletter-form input {
+        border-radius: 6px;
+        padding: 14px;
+    }
+
+    .newsletter-form button {
+        padding: 13px;
+    }
+
+    .footer-grid {
+        gap: 28px 14px;
+    }
+
+}
+
+/* ================= EXTRA SMALL PHONES ================= */
+
+@media (max-width: 350px) {
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .logo-icon {
+        width: 33px;
+        height: 33px;
+        font-size: 15px;
+    }
+
+    .menu-toggle,
+    .cart-btn {
+        width: 34px;
+        height: 34px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .category-info h3 {
+        font-size: 11px;
+    }
+
+    .food-details h3 {
+        font-size: 11px;
+    }
+
+    .popular-info h3 {
+        font-size: 12px;
+    }
+
+    .traditional-grid,
+    .category-grid {
+        gap: 9px;
+    }
+
+}

@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="KAS FOOD HOUSE Admin Dashboard - Manage orders, products, customers and restaurant operations.">
+
+    <meta name="theme-color" content="#101010">
+
+    <title>Admin Dashboard | KAS FOOD HOUSE</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="admin.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="admin-body">
+
+    <!-- ==============================
+         ADMIN LOADING SCREEN
+    =============================== -->
+
+    <div class="admin-loader" id="adminLoader">
+        <div class="admin-loader-content">
+            <div class="admin-loader-logo">
+                <i class="fas fa-utensils"></i>
+            </div>
+
+            <h2>KAS FOOD HOUSE</h2>
+
+            <p>Preparing your dashboard...</p>
+
+            <div class="admin-loader-spinner"></div>
+        </div>
+    </div>
+
+
+    <!-- ==============================
+         SIDEBAR OVERLAY
+    =============================== -->
+
+    <div class="admin-overlay" id="adminOverlay"></div>
+
+
+    <!-- ==============================
+         ADMIN SIDEBAR
+    =============================== -->
+
+    <aside class="admin-sidebar" id="adminSidebar">
+
+        <div class="admin-sidebar-top">
+
+            <!-- Logo -->
+            <a href="admin.html" class="admin-logo">
+
+                <div class="admin-logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+
+                <div class="admin-logo-text">
+                    <h2>KAS FOOD</h2>
+                    <span>HOUSE ADMIN</span>
+                </div>
+
+            </a>
+
+            <button class="admin-sidebar-close"
+                id="adminSidebarClose"
+                type="button"
+                aria-label="Close sidebar">
+
+                <i class="fas fa-times"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- Restaurant Status -->
+        <div class="admin-restaurant-status">
+
+            <span class="status-indicator"></span>
+
+            <span>Restaurant Dashboard</span>
+
+        </div>
+
+
+        <!-- Sidebar Navigation -->
+        <nav class="admin-sidebar-nav">
+
+            <div class="admin-nav-heading">
+                MAIN MENU
+            </div>
+
+            <button class="admin-nav-link active"
+                type="button"
+                data-section="overview"
+                data-title="Dashboard Overview"
+                data-subtitle="Welcome back! Here's what's happening today.">
+
+                <i class="fas fa-chart-pie"></i>
+
+                <span>Overview</span>
+
+            </button>
+
+
+            <button class="admin-nav-link"
+                type="button"
+                data-section="orders"
+                data-title="Order Management"
+                data-subtitle="Manage customer orders and update order progress.">
+
+                <i class="fas fa-receipt"></i>
+
+                <span>Orders</span>
+
+                <span class="admin-nav-badge" id="sidebarOrderCount">0</span>
+
+            </button>
+
+
+            <button class="admin-nav-link"
+                type="button"
+                data-section="products"
+                data-title="Food Products"
+                data-subtitle="Manage your restaurant menu and food products.">
+
+                <i class="fas fa-hamburger"></i>
+
+                <span>Products</span>
+
+            </button>
+
+
+            <button class="admin-nav-link"
+                type="button"
+                data-section="customers"
+                data-title="Customers"
+                data-subtitle="View and manage registered customers.">
+
+                <i class="fas fa-users"></i>
+
+                <span>Customers</span>
+
+            </button>
+
+
+            <div class="admin-nav-heading">
+                OPERATIONS
+            </div>
+
+
+            <button class="admin-nav-link"
+                type="button"
+                data-section="delivery"
+                data-title="Delivery Management"
+                data-subtitle="Monitor food deliveries and delivery progress.">
+
+                <i class="fas fa-truck"></i>
+
+                <span>Deliveries</span>
+
+            </button>
+
+
+            <button class="admin-nav-link"
+                type="button"
+                data-section="analytics"
+                data-title="Sales Analytics"
+                data-subtitle="Monitor restaurant performance and sales.">
+
+                <i class="fas fa-chart-line"></i>
+
+                <span>Analytics</span>
+
+            </button>
+
+
+            <button class="admin-nav-link"
+                type="button"
+                data-section="messages"
+                data-title="Customer Messages"
+                data-subtitle="View customer enquiries and messages.">
+
+                <i class="fas fa-envelope"></i>
+
+                <span>Messages</span>
+
+            </button>
+
+
+            <div class="admin-nav-heading">
+                CONFIGURATION
+            </div>
+
+
+            <button class="admin-nav-link"
+                type="button"
+                data-section="settings"
+                data-title="Restaurant Settings"
+                data-subtitle="Manage your restaurant information and preferences.">
+
+                <i class="fas fa-cog"></i>
+
+                <span>Settings</span>
+
+            </button>
+
+        </nav>
+
+
+        <!-- Sidebar Bottom -->
+        <div class="admin-sidebar-bottom">
+
+            <div class="admin-sidebar-help">
+
+                <div class="admin-help-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+
+                <div>
+                    <h4>Need assistance?</h4>
+                    <p>Manage your restaurant smoothly.</p>
+                </div>
+
+            </div>
+
+
+            <button class="admin-logout-btn"
+                id="adminLogout"
+                type="button">
+
+                <i class="fas fa-sign-out-alt"></i>
+
+                <span>Sign Out</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ==============================
+         MAIN ADMIN CONTENT
+    =============================== -->
+
+    <main class="admin-main">
+
+
+        <!-- ==============================
+             TOP HEADER
+        =============================== -->
+
+        <header class="admin-topbar">
+
+            <div class="admin-topbar-left">
+
+                <button class="admin-menu-toggle"
+                    id="adminMenuToggle"
+                    type="button"
+                    aria-label="Open navigation">
+
+                    <i class="fas fa-bars"></i>
+
+                </button>
+
+
+                <div class="admin-page-heading">
+
+                    <h1 id="adminPageTitle">
+                        Dashboard Overview
+                    </h1>
+
+                    <p id="adminPageSubtitle">
+                        Welcome back! Here's what's happening today.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-topbar-right">
+
+                <div class="admin-date">
+
+                    <i class="far fa-calendar-alt"></i>
+
+                    <span id="adminDate">Today</span>
+
+                </div>
+
+
+                <!-- Notifications -->
+                <button class="admin-notification-btn"
+                    id="adminNotificationBtn"
+                    type="button"
+                    aria-label="Notifications">
+
+                    <i class="far fa-bell"></i>
+
+                    <span id="adminNotificationCount">0</span>
+
+                </button>
+
+
+                <!-- Admin Profile -->
+                <div class="admin-profile">
+
+                    <div class="admin-avatar" id="adminAvatar">
+                        A
+                    </div>
+
+                    <div class="admin-profile-info">
+
+                        <h4 id="adminName">
+                            Administrator
+                        </h4>
+
+                        <span>Restaurant Admin</span>
+
+                    </div>
+
+                    <i class="fas fa-chevron-down"></i>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ==============================
+             DASHBOARD CONTENT
+        =============================== -->
+
+        <div class="admin-content">
+
+
+            <!-- ==================================
+                 1. OVERVIEW SECTION
+            =================================== -->
+
+            <section class="admin-section active"
+                id="overviewSection"
+                data-section-content="overview">
+
+
+                <!-- Welcome Banner -->
+                <div class="admin-welcome-banner">
+
+                    <div class="admin-welcome-content">
+
+                        <span class="admin-welcome-label">
+                            KAS FOOD HOUSE MANAGEMENT
+                        </span>
+
+                        <h2>
+                            Welcome back,
+                            <span id="welcomeAdminName">Administrator</span>!
+                        </h2>
+
+                        <p>
+                            Here's an overview of your restaurant's
+                            performance and daily activities.
+                        </p>
+
+                        <button class="admin-primary-btn"
+                            type="button"
+                            data-section="orders">
+
+                            <i class="fas fa-receipt"></i>
+
+                            View Orders
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="admin-welcome-icon">
+
+                        <i class="fas fa-utensils"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Statistics -->
+                <div class="admin-stats-grid">
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-top">
+
+                            <div class="admin-stat-icon revenue-icon">
+                                <i class="fas fa-wallet"></i>
+                            </div>
+
+                            <span class="admin-stat-label">
+                                TOTAL REVENUE
+                            </span>
+
+                        </div>
+
+                        <h3 id="totalRevenue">
+                            K0.00
+                        </h3>
+
+                        <p>
+                            Overall restaurant revenue
+                        </p>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-top">
+
+                            <div class="admin-stat-icon orders-icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+
+                            <span class="admin-stat-label">
+                                TOTAL ORDERS
+                            </span>
+
+                        </div>
+
+                        <h3 id="totalOrders">
+                            0
+                        </h3>
+
+                        <p>
+                            All customer orders
+                        </p>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-top">
+
+                            <div class="admin-stat-icon pending-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+
+                            <span class="admin-stat-label">
+                                PENDING ORDERS
+                            </span>
+
+                        </div>
+
+                        <h3 id="pendingOrders">
+                            0
+                        </h3>
+
+                        <p>
+                            Orders waiting for attention
+                        </p>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-top">
+
+                            <div class="admin-stat-icon customers-icon">
+                                <i class="fas fa-user-friends"></i>
+                            </div>
+
+                            <span class="admin-stat-label">
+                                CUSTOMERS
+                            </span>
+
+                        </div>
+
+                        <h3 id="totalCustomers">
+                            0
+                        </h3>
+
+                        <p>
+                            Registered customers
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Overview Panels -->
+                <div class="admin-overview-grid">
+
+
+                    <!-- Recent Orders -->
+                    <div class="admin-panel admin-recent-orders">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+                                <h3>Recent Orders</h3>
+                                <p>Latest customer activity</p>
+                            </div>
+
+                            <button class="admin-outline-btn"
+                                type="button"
+                                data-section="orders">
+
+                                View All
+
+                                <i class="fas fa-arrow-right"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="admin-table-wrapper">
+
+                            <table class="admin-table">
+
+                                <thead>
+                                    <tr>
+                                        <th>ORDER</th>
+                                        <th>CUSTOMER</th>
+                                        <th>AMOUNT</th>
+                                        <th>STATUS</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="recentOrdersBody">
+
+                                    <tr>
+                                        <td colspan="4">
+                                            Loading recent orders...
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Quick Summary -->
+                    <div class="admin-panel admin-quick-summary">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+                                <h3>Restaurant Summary</h3>
+                                <p>Current business activity</p>
+                            </div>
+
+                            <i class="fas fa-chart-bar"></i>
+
+                        </div>
+
+
+                        <div class="admin-summary-item">
+
+                            <div class="admin-summary-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+
+                            <div>
+                                <span>Completed Orders</span>
+                                <h4 id="completedOrders">0</h4>
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-summary-item">
+
+                            <div class="admin-summary-icon">
+                                <i class="fas fa-hamburger"></i>
+                            </div>
+
+                            <div>
+                                <span>Food Products</span>
+                                <h4 id="totalProducts">0</h4>
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-summary-item">
+
+                            <div class="admin-summary-icon">
+                                <i class="fas fa-truck"></i>
+                            </div>
+
+                            <div>
+                                <span>Out for Delivery</span>
+                                <h4 id="outForDeliveryCount">0</h4>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 2. ORDERS SECTION
+            =================================== -->
+
+            <section class="admin-section"
+                id="ordersSection"
+                data-section-content="orders">
+
+
+                <div class="admin-section-intro">
+
+                    <div>
+                        <h2>Order Management</h2>
+
+                        <p>
+                            Manage incoming orders, payments and order status.
+                        </p>
+                    </div>
+
+                    <button class="admin-outline-btn"
+                        id="refreshOrdersBtn"
+                        type="button">
+
+                        <i class="fas fa-sync-alt"></i>
+
+                        Refresh Orders
+
+                    </button>
+
+                </div>
+
+
+                <!-- Order Filters -->
+                <div class="admin-panel">
+
+                    <div class="admin-toolbar">
+
+                        <div class="admin-search-box">
+
+                            <i class="fas fa-search"></i>
+
+                            <input type="search"
+                                id="orderSearch"
+                                placeholder="Search order or customer...">
+
+                        </div>
+
+
+                        <div class="admin-filter-box">
+
+                            <select id="orderStatusFilter">
+
+                                <option value="all">
+                                    All Orders
+                                </option>
+
+                                <option value="pending">
+                                    Pending
+                                </option>
+
+                                <option value="processing">
+                                    Processing
+                                </option>
+
+                                <option value="preparing">
+                                    Preparing
+                                </option>
+
+                                <option value="ready">
+                                    Ready
+                                </option>
+
+                                <option value="out-for-delivery">
+                                    Out for Delivery
+                                </option>
+
+                                <option value="completed">
+                                    Completed
+                                </option>
+
+                                <option value="cancelled">
+                                    Cancelled
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Orders Table -->
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>ORDER ID</th>
+                                    <th>CUSTOMER</th>
+                                    <th>PHONE</th>
+                                    <th>ITEMS</th>
+                                    <th>TOTAL</th>
+                                    <th>PAYMENT</th>
+                                    <th>STATUS</th>
+                                    <th>ACTION</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="allOrdersBody">
+
+                                <tr>
+                                    <td colspan="8">
+                                        Loading orders...
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 3. PRODUCTS SECTION
+            =================================== -->
+
+            <section class="admin-section"
+                id="productsSection"
+                data-section-content="products">
+
+
+                <div class="admin-section-intro">
+
+                    <div>
+                        <h2>Food Products</h2>
+
+                        <p>
+                            Add, edit and manage your restaurant menu.
+                        </p>
+                    </div>
+
+
+                    <button class="admin-primary-btn"
+                        id="addProductBtn"
+                        type="button">
+
+                        <i class="fas fa-plus"></i>
+
+                        Add New Product
+
+                    </button>
+
+                </div>
+
+
+                <!-- Product Filters -->
+                <div class="admin-panel">
+
+                    <div class="admin-toolbar">
+
+                        <div class="admin-search-box">
+
+                            <i class="fas fa-search"></i>
+
+                            <input type="search"
+                                id="productSearch"
+                                placeholder="Search food products...">
+
+                        </div>
+
+
+                        <div class="admin-filter-box">
+
+                            <select id="productCategoryFilter">
+
+                                <option value="all">
+                                    All Categories
+                                </option>
+
+                                <option value="traditional">
+                                    Traditional Food
+                                </option>
+
+                                <option value="burgers">
+                                    Burgers
+                                </option>
+
+                                <option value="pizza">
+                                    Pizza
+                                </option>
+
+                                <option value="chicken">
+                                    Chicken
+                                </option>
+
+                                <option value="sides">
+                                    Sides
+                                </option>
+
+                                <option value="drinks">
+                                    Drinks
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Products Grid -->
+                    <div class="admin-products-grid"
+                        id="adminProductsGrid">
+
+                        <div class="admin-empty-state">
+
+                            <i class="fas fa-hamburger"></i>
+
+                            <h3>Loading Products</h3>
+
+                            <p>
+                                Your food products will appear here.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 4. CUSTOMERS SECTION
+            =================================== -->
+
+            <section class="admin-section"
+                id="customersSection"
+                data-section-content="customers">
+
+
+                <div class="admin-section-intro">
+
+                    <div>
+                        <h2>Customer Management</h2>
+
+                        <p>
+                            View your registered customers and their information.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-panel">
+
+                    <div class="admin-toolbar">
+
+                        <div class="admin-search-box">
+
+                            <i class="fas fa-search"></i>
+
+                            <input type="search"
+                                id="customerSearch"
+                                placeholder="Search customers...">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>CUSTOMER</th>
+                                    <th>EMAIL</th>
+                                    <th>PHONE</th>
+                                    <th>ACCOUNT TYPE</th>
+                                    <th>DATE JOINED</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="customersTableBody">
+
+                                <tr>
+                                    <td colspan="5">
+                                        Loading customers...
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 5. DELIVERY SECTION
+            =================================== -->
+
+            <section class="admin-section"
+                id="deliverySection"
+                data-section-content="delivery">
+
+
+                <div class="admin-section-intro">
+
+                    <div>
+                        <h2>Delivery Management</h2>
+
+                        <p>
+                            Monitor orders being prepared and delivered.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Delivery Statistics -->
+                <div class="admin-stats-grid admin-delivery-stats">
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon pending-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+
+                        <span>READY FOR DELIVERY</span>
+
+                        <h3 id="readyDeliveryCount">0</h3>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon orders-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+
+                        <span>OUT FOR DELIVERY</span>
+
+                        <h3 id="outForDeliveryCount">0</h3>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon customers-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+
+                        <span>DELIVERED</span>
+
+                        <h3 id="deliveredCount">0</h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Delivery Orders -->
+                <div class="admin-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+                            <h3>Delivery Orders</h3>
+                            <p>Orders requiring delivery attention</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>ORDER</th>
+                                    <th>CUSTOMER</th>
+                                    <th>PHONE</th>
+                                    <th>DELIVERY ADDRESS</th>
+                                    <th>STATUS</th>
+                                    <th>ACTION</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="deliveryOrdersBody">
+
+                                <tr>
+                                    <td colspan="6">
+                                        Loading delivery orders...
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 6. ANALYTICS SECTION
+            =================================== -->
+
+            <section class="admin-section"
+                id="analyticsSection"
+                data-section-content="analytics">
+
+
+                <div class="admin-section-intro">
+
+                    <div>
+                        <h2>Sales Analytics</h2>
+
+                        <p>
+                            Understand your restaurant's sales and performance.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- Analytics Statistics -->
+                <div class="admin-stats-grid">
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon revenue-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+
+                        <span>TOTAL REVENUE</span>
+
+                        <h3 id="analyticsRevenue">K0.00</h3>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon orders-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+
+                        <span>AVERAGE ORDER VALUE</span>
+
+                        <h3 id="averageOrderValue">K0.00</h3>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="admin-stat-icon customers-icon">
+                            <i class="fas fa-check-double"></i>
+                        </div>
+
+                        <span>COMPLETED ORDERS</span>
+
+                        <h3 id="analyticsCompletedOrders">0</h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Sales Chart -->
+                <div class="admin-panel admin-chart-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+                            <h3>Restaurant Sales Performance</h3>
+
+                            <p>
+                                Revenue and sales overview
+                            </p>
+                        </div>
+
+                        <span class="admin-chart-label">
+                            Sales Overview
+                        </span>
+
+                    </div>
+
+
+                    <div class="admin-chart-container">
+
+                        <canvas id="salesChart"></canvas>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Top Products -->
+                <div class="admin-panel admin-top-products-panel">
+
+                    <div class="admin-panel-header">
+
+                        <div>
+                            <h3>Popular Food Products</h3>
+
+                            <p>
+                                Your best-performing food items
+                            </p>
+                        </div>
+
+                        <i class="fas fa-fire"></i>
+
+                    </div>
+
+
+                    <div id="topProductsList">
+
+                        <div class="admin-empty-state">
+
+                            <i class="fas fa-chart-bar"></i>
+
+                            <p>
+                                Product performance will appear here.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 7. MESSAGES SECTION
+            =================================== -->
+
+            <section class="admin-section"
+                id="messagesSection"
+                data-section-content="messages">
+
+
+                <div class="admin-section-intro">
+
+                    <div>
+                        <h2>Customer Messages</h2>
+
+                        <p>
+                            Manage customer enquiries and feedback.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-panel">
+
+                    <div class="admin-table-wrapper">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>EMAIL</th>
+                                    <th>PHONE</th>
+                                    <th>SUBJECT</th>
+                                    <th>MESSAGE</th>
+                                    <th>DATE</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="messagesTableBody">
+
+                                <tr>
+                                    <td colspan="6">
+                                        Loading customer messages...
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 8. SETTINGS SECTION
+            =================================== -->
+
+            <section class="admin-section"
+                id="settingsSection"
+                data-section-content="settings">
+
+
+                <div class="admin-section-intro">
+
+                    <div>
+                        <h2>Restaurant Settings</h2>
+
+                        <p>
+                            Update your restaurant's business information.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-settings-grid">
+
+
+                    <!-- General Settings -->
+                    <div class="admin-panel">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+                                <h3>Restaurant Information</h3>
+
+                                <p>
+                                    Basic restaurant details
+                                </p>
+                            </div>
+
+                            <i class="fas fa-store"></i>
+
+                        </div>
+
+
+                        <form id="adminSettingsForm">
+
+
+                            <div class="admin-form-group">
+
+                                <label for="restaurantName">
+                                    Restaurant Name
+                                </label>
+
+                                <input type="text"
+                                    id="restaurantName"
+                                    placeholder="KAS FOOD HOUSE"
+                                    required>
+
+                            </div>
+
+
+                            <div class="admin-form-group">
+
+                                <label for="restaurantEmail">
+                                    Restaurant Email
+                                </label>
+
+                                <input type="email"
+                                    id="restaurantEmail"
+                                    placeholder="restaurant@example.com">
+
+                            </div>
+
+
+                            <div class="admin-form-group">
+
+                                <label for="restaurantPhone">
+                                    Restaurant Phone
+                                </label>
+
+                                <input type="tel"
+                                    id="restaurantPhone"
+                                    placeholder="Enter restaurant phone">
+
+                            </div>
+
+
+                            <div class="admin-form-group">
+
+                                <label for="restaurantAddress">
+                                    Restaurant Address
+                                </label>
+
+                                <textarea id="restaurantAddress"
+                                    rows="3"
+                                    placeholder="Enter restaurant address"></textarea>
+
+                            </div>
+
+
+                            <div class="admin-form-group">
+
+                                <label for="deliveryFeeSetting">
+                                    Delivery Fee (Kwacha)
+                                </label>
+
+                                <input type="number"
+                                    id="deliveryFeeSetting"
+                                    min="0"
+                                    step="0.01"
+                                    placeholder="0.00">
+
+                            </div>
+
+
+                            <div class="admin-form-group">
+
+                                <label for="restaurantStatus">
+                                    Restaurant Status
+                                </label>
+
+                                <select id="restaurantStatus">
+
+                                    <option value="open">
+                                        Open
+                                    </option>
+
+                                    <option value="closed">
+                                        Closed
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <button type="submit"
+                                class="admin-primary-btn">
+
+                                <i class="fas fa-save"></i>
+
+                                Save Settings
+
+                            </button>
+
+
+                            <div id="adminSettingsMessage"
+                                class="admin-form-message"
+                                role="status">
+
+                            </div>
+
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- Admin Account -->
+                    <div class="admin-panel">
+
+                        <div class="admin-panel-header">
+
+                            <div>
+                                <h3>Administrator Account</h3>
+
+                                <p>
+                                    Your dashboard account
+                                </p>
+                            </div>
+
+                            <i class="fas fa-user-shield"></i>
+
+                        </div>
+
+
+                        <div class="admin-account-card">
+
+                            <div class="admin-avatar admin-large-avatar"
+                                id="adminHeaderName">
+
+                                A
+
+                            </div>
+
+                            <div>
+                                <h3 id="adminAccountDisplay">
+                                    Administrator
+                                </h3>
+
+                                <span>Restaurant Administrator</span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="admin-security-notice">
+
+                            <i class="fas fa-shield-alt"></i>
+
+                            <div>
+
+                                <h4>Account Security</h4>
+
+                                <p>
+                                    Keep your administrator account secure.
+                                    Never share your password with anyone.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <button class="admin-outline-btn"
+                            id="adminLogoutSecondary"
+                            type="button">
+
+                            <i class="fas fa-sign-out-alt"></i>
+
+                            Sign Out
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+        <!-- ==============================
+             ADMIN FOOTER
+        =============================== -->
+
+        <footer class="admin-footer">
+
+            <p>
+                &copy; <span id="adminYear"></span>
+                KAS FOOD HOUSE.
+                All rights reserved.
+            </p>
+
+            <span>
+                Restaurant Management System
+            </span>
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         PRODUCT MODAL
+    ====================================== -->
+
+    <div class="admin-modal"
+        id="productModal"
+        aria-hidden="true">
+
+        <div class="admin-modal-content">
+
+            <div class="admin-modal-header">
+
+                <div>
+                    <h2 id="productModalTitle">
+                        Add New Product
+                    </h2>
+
+                    <p>
+                        Enter your food product information.
+                    </p>
+                </div>
+
+                <button class="admin-modal-close"
+                    id="closeProductModal"
+                    type="button"
+                    aria-label="Close product modal">
+
+                    <i class="fas fa-times"></i>
+
+                </button>
+
+            </div>
+
+
+            <form id="productForm">
+
+                <input type="hidden" id="productId">
+
+
+                <div class="admin-form-group">
+
+                    <label for="productName">
+                        Product Name
+                    </label>
+
+                    <input type="text"
+                        id="productName"
+                        placeholder="Example: Village Chicken"
+                        required>
+
+                </div>
+
+
+                <div class="admin-form-group">
+
+                    <label for="productDescription">
+                        Product Description
+                    </label>
+
+                    <textarea id="productDescription"
+                        rows="3"
+                        placeholder="Describe your food product"></textarea>
+
+                </div>
+
+
+                <div class="admin-form-row">
+
+                    <div class="admin-form-group">
+
+                        <label for="productPrice">
+                            Price (K)
+                        </label>
+
+                        <input type="number"
+                            id="productPrice"
+                            min="0"
+                            step="0.01"
+                            required>
+
+                    </div>
+
+
+                    <div class="admin-form-group">
+
+                        <label for="productCategory">
+                            Category
+                        </label>
+
+                        <select id="productCategory" required>
+
+                            <option value="">
+                                Select Category
+                            </option>
+
+                            <option value="traditional">
+                                Traditional Food
+                            </option>
+
+                            <option value="burgers">
+                                Burgers
+                            </option>
+
+                            <option value="pizza">
+                                Pizza
+                            </option>
+
+                            <option value="chicken">
+                                Chicken
+                            </option>
+
+                            <option value="sides">
+                                Sides
+                            </option>
+
+                            <option value="drinks">
+                                Drinks
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-form-group">
+
+                    <label for="productImage">
+                        Product Image URL
+                    </label>
+
+                    <input type="url"
+                        id="productImage"
+                        placeholder="https://example.com/food.jpg">
+
+                </div>
+
+
+                <div class="admin-form-checkboxes">
+
+                    <label class="admin-checkbox">
+
+                        <input type="checkbox"
+                            id="productAvailable"
+                            checked>
+
+                        <span>Available for ordering</span>
+
+                    </label>
+
+
+                    <label class="admin-checkbox">
+
+                        <input type="checkbox"
+                            id="productFeatured">
+
+                        <span>Featured product</span>
+
+                    </label>
+
+                </div>
+
+
+                <div class="admin-modal-actions">
+
+                    <button type="button"
+                        class="admin-outline-btn"
+                        id="cancelProductModal">
+
+                        Cancel
+
+                    </button>
+
+
+                    <button type="submit"
+                        class="admin-primary-btn">
+
+                        <i class="fas fa-save"></i>
+
+                        Save Product
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         ORDER DETAILS MODAL
+    ====================================== -->
+
+    <div class="admin-modal"
+        id="orderModal"
+        aria-hidden="true">
+
+        <div class="admin-modal-content admin-order-modal-content">
+
+            <div class="admin-modal-header">
+
+                <div>
+                    <h2>Order Details</h2>
+
+                    <p>
+                        View customer order information.
+                    </p>
+                </div>
+
+                <button class="admin-modal-close"
+                    id="closeOrderModal"
+                    type="button"
+                    aria-label="Close order modal">
+
+                    <i class="fas fa-times"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="admin-order-details"
+                id="orderDetailsContent">
+
+                <div class="admin-empty-state">
+
+                    <i class="fas fa-receipt"></i>
+
+                    <p>
+                        Select an order to view its details.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-modal-actions">
+
+                <button type="button"
+                    class="admin-outline-btn"
+                    id="cancelOrderModal">
+
+                    Close
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================
+         ADMIN TOAST NOTIFICATION
+    ====================================== -->
+
+    <div class="admin-toast"
+        id="adminToast"
+        role="status"
+        aria-live="polite">
+
+        <div class="admin-toast-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+
+        <div class="admin-toast-content">
+
+            <strong id="adminToastTitle">
+                Success
+            </strong>
+
+            <p id="adminToastMessage">
+                Operation completed successfully.
+            </p>
+
+        </div>
+
+        <button type="button"
+            id="closeAdminToast"
+            aria-label="Close notification">
+
+            <i class="fas fa-times"></i>
+
+        </button>
+
+    </div>
+
+
+
+    <!-- =====================================
+         SCRIPTS
+    ====================================== -->
+
+    <script src="app.js"></script>
+    <script src="animations.js"></script>
+
+    <script type="module" src="admin.js"></script>
+
+</body>
+</html>

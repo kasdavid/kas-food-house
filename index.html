@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="KAS FOOD HOUSE - Enjoy delicious traditional Zambian cuisine, burgers, pizza, fried chicken and more.">
+    <meta name="theme-color" content="#101010">
+
+    <title>KAS FOOD HOUSE | Taste the Difference</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+
+<body>
+
+<!-- LOADING SCREEN -->
+<div class="loader" id="loader">
+    <div class="loader-content">
+        <i class="fas fa-utensils"></i>
+        <h2>KAS FOOD HOUSE</h2>
+        <div class="loader-line"></div>
+        <p>Preparing something delicious...</p>
+    </div>
+</div>
+
+<!-- ANIMATED BACKGROUND WORDS -->
+<div class="background-words" aria-hidden="true">
+    <span>DELICIOUS</span>
+    <span>FRESH FOOD</span>
+    <span>ZAMBIAN TASTE</span>
+    <span>QUALITY FOOD</span>
+    <span>KAS FOOD HOUSE</span>
+</div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="container top-bar-content">
+        <p>
+            <i class="fas fa-location-dot"></i>
+            Fresh Food. Authentic Zambian Taste.
+        </p>
+
+        <p>
+            <i class="fas fa-clock"></i>
+            Freshly Prepared Every Day
+        </p>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header class="main-header">
+    <div class="container navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-icon">
+                <i class="fas fa-fire"></i>
+            </span>
+
+            <span>
+                KAS <strong>FOOD</strong>
+                <small>HOUSE</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="nav-menu" id="navMenu">
+
+            <a href="index.html" class="active">Home</a>
+
+            <a href="shop.html">Shop</a>
+
+            <a href="menu.html">Our Menu</a>
+
+            <a href="#traditional">Traditional Food</a>
+
+            <a href="#about">About Us</a>
+
+            <a href="contact.html">Contact</a>
+
+            <a href="login.html" class="mobile-login">Login</a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <a href="login.html" class="login-btn">
+                <i class="far fa-user"></i> Login
+            </a>
+
+            <a href="cart.html" class="cart-btn" aria-label="Shopping cart">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </a>
+
+        </div>
+
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-container">
+
+        <div class="hero-content">
+
+            <div class="hero-label">
+                <i class="fas fa-star"></i>
+                WELCOME TO KAS FOOD HOUSE
+            </div>
+
+            <h1>
+                A Taste Of
+                <span>Tradition</span>
+                & Modern Flavours.
+            </h1>
+
+            <p>
+                Experience the authentic taste of Zambia alongside
+                your favourite burgers, pizza, crispy chicken and more.
+                Freshly prepared, full of flavour and made with love.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="menu.html" class="btn btn-primary">
+                    Explore Our Menu
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <a href="#traditional" class="btn btn-outline">
+                    Discover Zambian Food
+                </a>
+
+            </div>
+
+            <div class="hero-features">
+
+                <div>
+                    <i class="fas fa-leaf"></i>
+                    <span>Fresh Ingredients</span>
+                </div>
+
+                <div>
+                    <i class="fas fa-fire"></i>
+                    <span>Freshly Prepared</span>
+                </div>
+
+                <div>
+                    <i class="fas fa-heart"></i>
+                    <span>Made With Love</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <div class="hero-image-glow"></div>
+
+            <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?w=1000"
+                alt="Delicious freshly prepared food"
+            >
+
+            <div class="hero-floating-card">
+                <i class="fas fa-utensils"></i>
+                <div>
+                    <strong>Authentic Taste</strong>
+                    <small>Made fresh for you</small>
+                </div>
+            </div>
+
+            <div class="hero-discount">
+                <strong>100%</strong>
+                <span>Fresh Taste</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="hero-scroll">
+        <span>SCROLL TO EXPLORE</span>
+        <i class="fas fa-arrow-down"></i>
+    </div>
+
+</section>
+
+<!-- MOVING TEXT -->
+<div class="marquee-section">
+    <div class="marquee-track">
+
+        <span>TRADITIONAL ZAMBIAN FOOD</span>
+        <i class="fas fa-star"></i>
+
+        <span>FRESH BURGERS</span>
+        <i class="fas fa-star"></i>
+
+        <span>DELICIOUS PIZZA</span>
+        <i class="fas fa-star"></i>
+
+        <span>AUTHENTIC FLAVOURS</span>
+        <i class="fas fa-star"></i>
+
+        <span>TRADITIONAL ZAMBIAN FOOD</span>
+        <i class="fas fa-star"></i>
+
+        <span>FRESH BURGERS</span>
+        <i class="fas fa-star"></i>
+
+        <span>DELICIOUS PIZZA</span>
+        <i class="fas fa-star"></i>
+
+    </div>
+</div>
+
+<!-- FOOD CATEGORIES -->
+<section class="categories section-padding">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-subtitle">EXPLORE OUR COLLECTION</span>
+
+            <h2>What Are You <span>Craving?</span></h2>
+
+            <p>Discover delicious meals prepared to satisfy every craving.</p>
+
+        </div>
+
+        <div class="category-grid">
+
+            <a href="menu.html?category=traditional" class="category-card">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=500" alt="Traditional food">
+                <div class="category-info">
+                    <h3>Traditional Food</h3>
+                    <span>Discover Local Flavours</span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <a href="menu.html?category=burgers" class="category-card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=500" alt="Fresh beef burger">
+                <div class="category-info">
+                    <h3>Burgers</h3>
+                    <span>Juicy & Delicious</span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <a href="menu.html?category=chicken" class="category-card">
+                <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=500" alt="Crispy chicken">
+                <div class="category-info">
+                    <h3>Chicken & Chips</h3>
+                    <span>Crunchy Goodness</span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+            <a href="menu.html?category=pizza" class="category-card">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500" alt="Fresh pizza">
+                <div class="category-info">
+                    <h3>Pizza</h3>
+                    <span>Cheesy Perfection</span>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TRADITIONAL ZAMBIAN FOOD -->
+<section class="traditional-section section-padding" id="traditional">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-subtitle">🇿🇲 THE TASTE OF HOME</span>
+
+            <h2>Authentic <span>Zambian Cuisine</span></h2>
+
+            <p>
+                Celebrate our culture through delicious traditional
+                meals prepared with authentic local ingredients.
+            </p>
+
+        </div>
+
+        <div class="traditional-grid">
+
+            <article class="food-card">
+
+                <div class="food-image">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600" alt="Nshima with traditional stew">
+                    <span class="food-badge">LOCAL FAVOURITE</span>
+                </div>
+
+                <div class="food-details">
+                    <span class="food-category">TRADITIONAL</span>
+                    <h3>Nshima & Beef Stew</h3>
+                    <p>Traditional nshima served with delicious tender beef stew.</p>
+                    <div class="food-card-bottom">
+                        <span class="price">K --</span>
+                        <a href="menu.html" class="food-order-btn" aria-label="View Nshima and beef">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </article>
+
+            <article class="food-card">
+
+                <div class="food-image">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600" alt="Traditional vegetables">
+                </div>
+
+                <div class="food-details">
+                    <span class="food-category">TRADITIONAL</span>
+                    <h3>Ifisashi</h3>
+                    <p>Delicious traditional vegetables cooked with groundnuts.</p>
+                    <div class="food-card-bottom">
+                        <span class="price">K --</span>
+                        <a href="menu.html" class="food-order-btn" aria-label="View Ifisashi">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </article>
+
+            <article class="food-card">
+
+                <div class="food-image">
+                    <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=600" alt="Roasted chicken">
+                </div>
+
+                <div class="food-details">
+                    <span class="food-category">TRADITIONAL</span>
+                    <h3>Village Chicken</h3>
+                    <p>Traditional chicken prepared with delicious local flavours.</p>
+                    <div class="food-card-bottom">
+                        <span class="price">K --</span>
+                        <a href="menu.html" class="food-order-btn" aria-label="View Village Chicken">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </article>
+
+            <article class="food-card">
+
+                <div class="food-image">
+                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600" alt="Freshly prepared fish">
+                </div>
+
+                <div class="food-details">
+                    <span class="food-category">TRADITIONAL</span>
+                    <h3>Kapenta & Nshima</h3>
+                    <p>Enjoy traditional kapenta served with nshima and vegetables.</p>
+                    <div class="food-card-bottom">
+                        <span class="price">K --</span>
+                        <a href="menu.html" class="food-order-btn" aria-label="View Kapenta">
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </article>
+
+        </div>
+
+        <div class="section-center">
+            <a href="menu.html?category=traditional" class="btn btn-primary">
+                Explore Traditional Menu
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROMOTIONAL BANNER -->
+<section class="promo-section">
+
+    <div class="container promo-container">
+
+        <div class="promo-content">
+
+            <span class="section-subtitle">GOOD FOOD. GOOD MOOD.</span>
+
+            <h2>From Our Kitchen<br>To Your <span>Table.</span></h2>
+
+            <p>
+                Whether you love traditional Zambian meals or modern
+                fast food, we have something special waiting for you.
+            </p>
+
+            <a href="shop.html" class="btn btn-primary">
+                Order Your Favourite Food
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+        <div class="promo-image">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=900" alt="Delicious food platter">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- POPULAR FOOD -->
+<section class="popular-section section-padding">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="section-subtitle">CUSTOMER FAVOURITES</span>
+
+            <h2>Our Popular <span>Meals</span></h2>
+
+            <p>Explore some of the meals our customers love.</p>
+
+        </div>
+
+        <div class="popular-grid">
+
+            <article class="popular-card">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600" alt="Beef burger">
+                <div class="popular-info">
+                    <span>BEST SELLER</span>
+                    <h3>Classic Beef Burger</h3>
+                    <p>Fresh beef, cheese, lettuce and special sauce.</p>
+                    <a href="shop.html" class="btn btn-small">Order Now</a>
+                </div>
+            </article>
+
+            <article class="popular-card">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600" alt="Delicious pizza">
+                <div class="popular-info">
+                    <span>POPULAR CHOICE</span>
+                    <h3>Special Pizza</h3>
+                    <p>Loaded with delicious toppings and melted cheese.</p>
+                    <a href="shop.html" class="btn btn-small">Order Now</a>
+                </div>
+            </article>
+
+            <article class="popular-card">
+                <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=600" alt="Fried chicken">
+                <div class="popular-info">
+                    <span>CUSTOMER FAVOURITE</span>
+                    <h3>Crispy Fried Chicken</h3>
+                    <p>Golden crispy chicken with amazing flavour.</p>
+                    <a href="shop.html" class="btn btn-small">Order Now</a>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="about-section section-padding" id="about">
+
+    <div class="container about-container">
+
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900" alt="Restaurant dining experience">
+
+            <div class="about-experience">
+                <i class="fas fa-heart"></i>
+                <strong>Made With Love</strong>
+                <span>Every Single Meal</span>
+            </div>
+        </div>
+
+        <div class="about-content">
+
+            <span class="section-subtitle">OUR STORY</span>
+
+            <h2>Celebrating Food,<br>Culture & <span>Community.</span></h2>
+
+            <p>
+                At KAS FOOD HOUSE, we believe food brings people together.
+                Our vision is to celebrate the rich flavours of Zambia
+                while offering the exciting tastes of modern fast food.
+            </p>
+
+            <p>
+                From traditional nshima and ifisashi to juicy burgers
+                and delicious pizza, every meal is an opportunity to
+                enjoy something special.
+            </p>
+
+            <a href="about.html" class="btn btn-primary">
+                Discover Our Story
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter-section">
+
+    <div class="container newsletter-container">
+
+        <div>
+            <span class="section-subtitle">STAY CONNECTED</span>
+            <h2>Get Delicious Updates!</h2>
+            <p>Be the first to hear about new meals, offers and promotions.</p>
+        </div>
+
+        <form class="newsletter-form" id="newsletterForm">
+
+            <input
+                type="email"
+                id="newsletterEmail"
+                placeholder="Enter your email address"
+                required
+            >
+
+            <button type="submit">
+                Subscribe
+                <i class="fas fa-paper-plane"></i>
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">
+                    <i class="fas fa-fire"></i>
+                </span>
+
+                <span>
+                    KAS <strong>FOOD</strong>
+                    <small>HOUSE</small>
+                </span>
+            </a>
+
+            <p>
+                Celebrating traditional Zambian flavours and
+                modern fast food. Great food, unforgettable taste.
+            </p>
+
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+        </div>
+
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="menu.html">Our Menu</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>Food Categories</h3>
+            <a href="menu.html?category=traditional">Traditional Food</a>
+            <a href="menu.html?category=burgers">Burgers</a>
+            <a href="menu.html?category=chicken">Chicken & Chips</a>
+            <a href="menu.html?category=pizza">Pizza</a>
+            <a href="menu.html?category=drinks">Drinks</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+
+            <p><i class="fas fa-map-marker-alt"></i> Zambia</p>
+            <p><i class="fas fa-phone"></i> Contact details coming soon</p>
+            <p><i class="fas fa-envelope"></i> Email coming soon</p>
+
+            <h4>Opening Hours</h4>
+            <p>Monday - Sunday</p>
+            <p>Opening hours coming soon</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            &copy; <span id="currentYear"></span>
+            KAS FOOD HOUSE. All Rights Reserved.
+        </p>
+
+        <p>Made with <i class="fas fa-heart"></i> in Zambia 🇿🇲</p>
+    </div>
+
+</footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/260977683656"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat with us on WhatsApp">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- JAVASCRIPT -->
+<script src="app.js"></script>
+<script src="animations.js"></script>
+
+</body>
+</html>

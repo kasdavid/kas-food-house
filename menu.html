@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Menu | KAS FOOD HOUSE</title>
+
+    <meta name="description"
+        content="Explore traditional Zambian meals, burgers, pizza, chicken, snacks and refreshing drinks at KAS FOOD HOUSE.">
+
+    <meta name="theme-color" content="#101010">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- MAIN STYLES -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="menu.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         LOADER
+    =========================================== -->
+
+    <div class="loader" id="loader">
+
+        <div class="loader-content">
+
+            <div class="loader-logo">
+                <span>KAS</span>
+            </div>
+
+            <h2>KAS FOOD HOUSE</h2>
+
+            <p>Preparing something delicious...</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         TOP BAR
+    =========================================== -->
+
+    <div class="top-bar">
+
+        <div class="container top-bar-content">
+
+            <p>
+                <i class="fas fa-utensils"></i>
+                Fresh Food. Great Taste. Every Day.
+            </p>
+
+            <div class="top-bar-right">
+
+                <span>
+                    <i class="fas fa-clock"></i>
+                    Quality Food, Made Fresh
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         NAVIGATION
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="container navbar-container">
+
+            <a href="index.html" class="logo">
+
+                <div class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+
+                <div class="logo-text">
+                    <strong>KAS</strong>
+                    <span>FOOD HOUSE</span>
+                </div>
+
+            </a>
+
+
+            <button class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html">Home</a>
+
+                <a href="menu.html" class="active">Our Menu</a>
+
+                <a href="index.html#traditional">Traditional Food</a>
+
+                <a href="index.html#about">About Us</a>
+
+                <a href="contact.html">Contact</a>
+
+                <a href="login.html">Login</a>
+
+            </nav>
+
+
+            <a href="cart.html" class="nav-cart">
+
+                <i class="fas fa-shopping-bag"></i>
+
+                <span>Cart</span>
+
+                <span class="cart-count" id="cartCount">0</span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==========================================
+         MENU HERO
+    =========================================== -->
+
+    <section class="menu-hero">
+
+        <div class="menu-hero-overlay"></div>
+
+        <div class="menu-hero-content">
+
+            <span class="menu-label">
+                <i class="fas fa-fire"></i>
+                GOOD FOOD, GREAT MOMENTS
+            </span>
+
+            <h1>
+                Explore Our
+                <span>Delicious Menu</span>
+            </h1>
+
+            <p>
+                From authentic Zambian traditional meals
+                to your favourite fast food, there is
+                something delicious waiting for you.
+            </p>
+
+            <a href="#foodMenu" class="btn-primary">
+                Explore Menu
+                <i class="fas fa-arrow-down"></i>
+            </a>
+
+        </div>
+
+        <div class="menu-hero-decoration">
+            <span>FRESH</span>
+            <span>DELICIOUS</span>
+            <span>QUALITY</span>
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         MENU PROMO BAR
+    =========================================== -->
+
+    <section class="menu-promo-bar">
+
+        <div class="container menu-promo-content">
+
+            <div>
+                <i class="fas fa-leaf"></i>
+                <span>Fresh Ingredients</span>
+            </div>
+
+            <div>
+                <i class="fas fa-heart"></i>
+                <span>Made With Love</span>
+            </div>
+
+            <div>
+                <i class="fas fa-truck"></i>
+                <span>Delivery Available</span>
+            </div>
+
+            <div>
+                <i class="fas fa-star"></i>
+                <span>Great Taste</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         MENU SECTION
+    =========================================== -->
+
+    <section class="menu-section" id="foodMenu">
+
+        <div class="container">
+
+            <!-- SECTION HEADING -->
+
+            <div class="section-heading menu-heading">
+
+                <span class="section-subtitle">
+                    WHAT WOULD YOU LIKE TODAY?
+                </span>
+
+                <h2>
+                    Our Food <span>Collection</span>
+                </h2>
+
+                <p>
+                    Discover our selection of freshly prepared
+                    meals and delicious favourites.
+                </p>
+
+            </div>
+
+
+            <!-- SEARCH AND SORT -->
+
+            <div class="menu-toolbar">
+
+                <div class="menu-search">
+
+                    <i class="fas fa-search"></i>
+
+                    <input
+                        type="search"
+                        id="menuSearch"
+                        placeholder="Search for food..."
+                        autocomplete="off"
+                        aria-label="Search menu">
+
+                    <button
+                        type="button"
+                        id="clearMenuSearch"
+                        aria-label="Clear search">
+
+                        <i class="fas fa-times"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="menu-sort">
+
+                    <label for="menuSort">
+                        <i class="fas fa-sort"></i>
+                        Sort:
+                    </label>
+
+                    <select id="menuSort">
+
+                        <option value="default">Recommended</option>
+
+                        <option value="price-low">Price: Low to High</option>
+
+                        <option value="price-high">Price: High to Low</option>
+
+                        <option value="name">Name: A to Z</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOD CATEGORIES -->
+
+            <div class="menu-categories">
+
+                <button
+                    class="menu-category active"
+                    data-category="all"
+                    type="button">
+
+                    <i class="fas fa-border-all"></i>
+                    All Food
+
+                </button>
+
+
+                <button
+                    class="menu-category"
+                    data-category="traditional"
+                    type="button">
+
+                    <i class="fas fa-bowl-food"></i>
+                    Traditional
+
+                </button>
+
+
+                <button
+                    class="menu-category"
+                    data-category="burgers"
+                    type="button">
+
+                    <i class="fas fa-burger"></i>
+                    Burgers
+
+                </button>
+
+
+                <button
+                    class="menu-category"
+                    data-category="pizza"
+                    type="button">
+
+                    <i class="fas fa-pizza-slice"></i>
+                    Pizza
+
+                </button>
+
+
+                <button
+                    class="menu-category"
+                    data-category="chicken"
+                    type="button">
+
+                    <i class="fas fa-drumstick-bite"></i>
+                    Chicken
+
+                </button>
+
+
+                <button
+                    class="menu-category"
+                    data-category="sides"
+                    type="button">
+
+                    <i class="fas fa-french-fries"></i>
+                    Sides
+
+                </button>
+
+
+                <button
+                    class="menu-category"
+                    data-category="drinks"
+                    type="button">
+
+                    <i class="fas fa-glass-water"></i>
+                    Drinks
+
+                </button>
+
+            </div>
+
+
+            <!-- MENU INFORMATION -->
+
+            <div class="menu-results-bar">
+
+                <p>
+                    Showing
+                    <strong id="menuResultCount">0</strong>
+                    delicious items
+                </p>
+
+                <span>
+                    <i class="fas fa-circle"></i>
+                    Freshly Prepared
+                </span>
+
+            </div>
+
+
+            <!-- PRODUCT GRID -->
+
+            <div class="menu-products-grid" id="menuProducts">
+
+                <!-- Products will be loaded using menu.js -->
+
+                <div class="menu-loading">
+
+                    <div class="menu-spinner"></div>
+
+                    <p>Loading delicious food...</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- NO RESULTS -->
+
+            <div class="menu-no-results" id="menuNoResults" hidden>
+
+                <div class="no-results-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+
+                <h3>No Food Found</h3>
+
+                <p>
+                    We couldn't find anything matching your search.
+                    Try another food name or category.
+                </p>
+
+                <button type="button" id="resetMenuFilters">
+                    <i class="fas fa-refresh"></i>
+                    View All Food
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         TRADITIONAL FOOD FEATURE
+    =========================================== -->
+
+    <section class="traditional-feature">
+
+        <div class="container traditional-feature-container">
+
+            <div class="traditional-feature-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85"
+                    alt="Traditional food selection"
+                    loading="lazy">
+
+                <div class="traditional-image-badge">
+
+                    <i class="fas fa-heart"></i>
+
+                    <span>
+                        Proudly Celebrating
+                        <strong>Zambian Food</strong>
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="traditional-feature-content">
+
+                <span class="section-subtitle">
+                    OUR ZAMBIAN HERITAGE
+                </span>
+
+                <h2>
+                    The Taste of
+                    <span>Home</span>
+                </h2>
+
+                <p>
+                    Enjoy the taste of home with our traditional
+                    Zambian meals. From nshima and village chicken
+                    to ifisashi, kapenta and chikanda.
+                </p>
+
+                <p>
+                    We celebrate local flavours and the meals
+                    that bring families together.
+                </p>
+
+                <a href="#foodMenu"
+                    class="btn-primary"
+                    data-category-link="traditional">
+
+                    Explore Traditional Food
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         ORDER CTA
+    =========================================== -->
+
+    <section class="menu-cta">
+
+        <div class="container menu-cta-content">
+
+            <div>
+
+                <span>HUNGRY ALREADY?</span>
+
+                <h2>
+                    Your Next Favourite Meal
+                    Is Just a Click Away.
+                </h2>
+
+                <p>
+                    Choose your favourite food and add it
+                    to your shopping bag.
+                </p>
+
+            </div>
+
+            <a href="#foodMenu" class="btn-primary">
+
+                Order Your Food
+
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+
+                    <div class="logo-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+
+                    <div class="logo-text">
+                        <strong>KAS</strong>
+                        <span>FOOD HOUSE</span>
+                    </div>
+
+                </a>
+
+                <p>
+                    Bringing delicious food and great
+                    moments to your table.
+                </p>
+
+                <div class="footer-socials">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="menu.html">Our Menu</a>
+
+                <a href="cart.html">Shopping Cart</a>
+
+                <a href="about.html">About Us</a>
+
+                <a href="contact.html">Contact</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Food Categories</h3>
+
+                <a href="#foodMenu" data-category-link="traditional">
+                    Traditional Food
+                </a>
+
+                <a href="#foodMenu" data-category-link="burgers">
+                    Burgers
+                </a>
+
+                <a href="#foodMenu" data-category-link="pizza">
+                    Pizza
+                </a>
+
+                <a href="#foodMenu" data-category-link="chicken">
+                    Chicken
+                </a>
+
+                <a href="#foodMenu" data-category-link="drinks">
+                    Drinks
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Customer Support</h3>
+
+                <a href="contact.html">Contact Us</a>
+
+                <a href="login.html">My Account</a>
+
+                <a href="cart.html">My Cart</a>
+
+                <a href="checkout.html">Checkout</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                &copy; <span id="currentYear"></span>
+                KAS FOOD HOUSE. All Rights Reserved.
+            </p>
+
+            <p>
+                Made with <i class="fas fa-heart"></i> for food lovers.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==========================================
+         BACK TO TOP
+    =========================================== -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        aria-label="Back to top">
+
+        <i class="fas fa-arrow-up"></i>
+
+    </button>
+
+
+    <!-- ==========================================
+         CART NOTIFICATION
+    =========================================== -->
+
+    <div class="cart-notification" id="cartNotification">
+
+        <i class="fas fa-check-circle"></i>
+
+        <span>Food added to your shopping bag!</span>
+
+    </div>
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script src="products.js"></script>
+
+    <script src="cart.js"></script>
+
+    <script src="menu.js"></script>
+
+    <script src="app.js"></script>
+
+    <script src="animations.js"></script>
+
+</body>
+
+</html>

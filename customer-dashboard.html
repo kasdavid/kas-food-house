@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Dashboard | KAS FOOD HOUSE</title>
+
+    <meta name="description"
+        content="Manage your KAS FOOD HOUSE account, orders and personal details.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="dashboard.css">
+
+</head>
+
+<body class="dashboard-page">
+
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <i class="fas fa-utensils"></i>
+            </div>
+            <h2>KAS FOOD HOUSE</h2>
+            <p>Preparing your dashboard...</p>
+        </div>
+    </div>
+
+
+    <!-- SIDEBAR -->
+    <aside class="dashboard-sidebar" id="dashboardSidebar">
+
+        <div class="dashboard-brand">
+
+            <a href="index.html" class="dashboard-logo">
+                <span class="dashboard-logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </span>
+
+                <span>
+                    KAS <strong>FOOD HOUSE</strong>
+                </span>
+            </a>
+
+            <button class="sidebar-close" id="sidebarClose"
+                aria-label="Close sidebar">
+                <i class="fas fa-times"></i>
+            </button>
+
+        </div>
+
+
+        <!-- CUSTOMER PROFILE -->
+        <div class="sidebar-profile">
+
+            <div class="profile-avatar" id="sidebarAvatar">
+                <i class="fas fa-user"></i>
+            </div>
+
+            <div class="sidebar-profile-info">
+                <h3 id="sidebarCustomerName">Customer</h3>
+                <span>Customer Account</span>
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+        <nav class="dashboard-navigation">
+
+            <p class="sidebar-heading">MAIN MENU</p>
+
+            <a href="#overview" class="dashboard-nav-link active"
+                data-dashboard-tab="overview">
+
+                <i class="fas fa-th-large"></i>
+                <span>Overview</span>
+
+            </a>
+
+
+            <a href="#orders" class="dashboard-nav-link"
+                data-dashboard-tab="orders">
+
+                <i class="fas fa-receipt"></i>
+                <span>My Orders</span>
+
+                <span class="nav-count" id="ordersCount">0</span>
+
+            </a>
+
+
+            <a href="cart.html" class="dashboard-nav-link">
+
+                <i class="fas fa-shopping-bag"></i>
+                <span>My Cart</span>
+
+                <span class="nav-count" id="dashboardCartCount">0</span>
+
+            </a>
+
+
+            <a href="#profile" class="dashboard-nav-link"
+                data-dashboard-tab="profile">
+
+                <i class="fas fa-user-circle"></i>
+                <span>My Profile</span>
+
+            </a>
+
+
+            <p class="sidebar-heading">FOOD & SERVICES</p>
+
+
+            <a href="menu.html" class="dashboard-nav-link">
+
+                <i class="fas fa-utensils"></i>
+                <span>Explore Menu</span>
+
+            </a>
+
+
+            <a href="traditional-food.html" class="dashboard-nav-link">
+
+                <i class="fas fa-drumstick-bite"></i>
+                <span>Traditional Food</span>
+
+            </a>
+
+
+            <a href="contact.html" class="dashboard-nav-link">
+
+                <i class="fas fa-headset"></i>
+                <span>Contact Support</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-promo">
+
+                <div class="promo-icon">
+                    <i class="fas fa-burger"></i>
+                </div>
+
+                <h4>Hungry Again?</h4>
+
+                <p>Discover something delicious today.</p>
+
+                <a href="menu.html">
+                    Explore Menu
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+
+            <button class="dashboard-logout" id="logoutButton">
+
+                <i class="fas fa-sign-out-alt"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- SIDEBAR OVERLAY -->
+    <div class="dashboard-overlay" id="dashboardOverlay"></div>
+
+
+    <!-- MAIN DASHBOARD -->
+    <main class="dashboard-main">
+
+
+        <!-- TOP HEADER -->
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button class="sidebar-toggle" id="sidebarToggle"
+                    aria-label="Open sidebar">
+
+                    <i class="fas fa-bars"></i>
+
+                </button>
+
+                <div>
+                    <span class="dashboard-date" id="dashboardDate">
+                        CUSTOMER DASHBOARD
+                    </span>
+
+                    <h2>My Dashboard</h2>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-header-right">
+
+                <a href="cart.html" class="header-cart"
+                    aria-label="Shopping cart">
+
+                    <i class="fas fa-shopping-cart"></i>
+
+                    <span class="header-cart-count" id="headerCartCount">
+                        0
+                    </span>
+
+                </a>
+
+
+                <div class="header-user">
+
+                    <div class="header-user-avatar" id="headerAvatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+
+                    <div class="header-user-info">
+
+                        <strong id="headerCustomerName">Customer</strong>
+
+                        <span>My Account</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD CONTENT -->
+        <div class="dashboard-content">
+
+
+            <!-- OVERVIEW TAB -->
+            <section class="dashboard-tab active" id="overview">
+
+
+                <!-- WELCOME BANNER -->
+                <div class="dashboard-welcome">
+
+                    <div class="welcome-content">
+
+                        <span class="welcome-tag">
+                            WELCOME BACK
+                        </span>
+
+                        <h1>
+                            Hello, <span id="welcomeCustomerName">Customer</span>!
+                        </h1>
+
+                        <p>
+                            Good food brings people together.
+                            What are you craving today?
+                        </p>
+
+                        <a href="menu.html" class="welcome-button">
+
+                            Order Food Now
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="welcome-decoration">
+
+                        <div class="welcome-circle"></div>
+
+                        <i class="fas fa-hamburger welcome-food-icon"></i>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STATISTICS -->
+                <div class="dashboard-stats">
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon orange">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+
+                        <div class="stat-info">
+
+                            <span>Total Orders</span>
+
+                            <h3 id="totalOrders">0</h3>
+
+                            <small>Orders placed</small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon gold">
+                            <i class="fas fa-clock"></i>
+                        </div>
+
+                        <div class="stat-info">
+
+                            <span>Pending Orders</span>
+
+                            <h3 id="pendingOrders">0</h3>
+
+                            <small>Awaiting completion</small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+
+                        <div class="stat-info">
+
+                            <span>Completed Orders</span>
+
+                            <h3 id="completedOrders">0</h3>
+
+                            <small>Successfully delivered</small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon purple">
+                            <i class="fas fa-wallet"></i>
+                        </div>
+
+                        <div class="stat-info">
+
+                            <span>Total Spent</span>
+
+                            <h3 id="totalSpent">K0.00</h3>
+
+                            <small>Your food purchases</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK ACTIONS -->
+                <div class="dashboard-section">
+
+                    <div class="dashboard-section-heading">
+
+                        <div>
+                            <span class="section-subtitle">QUICK ACCESS</span>
+                            <h2>What would you like to do?</h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions-grid">
+
+
+                        <a href="menu.html" class="quick-action-card">
+
+                            <div class="quick-action-icon orange">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+
+                            <h3>Order Food</h3>
+
+                            <p>Explore our delicious menu.</p>
+
+                            <span>
+                                Explore
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+
+                        </a>
+
+
+                        <a href="traditional-food.html"
+                            class="quick-action-card">
+
+                            <div class="quick-action-icon gold">
+                                <i class="fas fa-drumstick-bite"></i>
+                            </div>
+
+                            <h3>Traditional Food</h3>
+
+                            <p>Enjoy authentic Zambian meals.</p>
+
+                            <span>
+                                Discover
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+
+                        </a>
+
+
+                        <a href="cart.html" class="quick-action-card">
+
+                            <div class="quick-action-icon green">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+
+                            <h3>My Shopping Cart</h3>
+
+                            <p>Review your selected meals.</p>
+
+                            <span>
+                                View Cart
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+
+                        </a>
+
+
+                        <button class="quick-action-card"
+                            data-dashboard-tab="profile">
+
+                            <div class="quick-action-icon purple">
+                                <i class="fas fa-user-edit"></i>
+                            </div>
+
+                            <h3>Update Profile</h3>
+
+                            <p>Manage your personal information.</p>
+
+                            <span>
+                                Edit Profile
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RECENT ORDERS -->
+                <div class="dashboard-section">
+
+                    <div class="dashboard-section-heading">
+
+                        <div>
+                            <span class="section-subtitle">ORDER HISTORY</span>
+                            <h2>Recent Orders</h2>
+                        </div>
+
+                        <button class="view-all-btn"
+                            data-dashboard-tab="orders">
+
+                            View All
+                            <i class="fas fa-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+
+                    <div class="dashboard-table-wrapper">
+
+                        <table class="dashboard-table">
+
+                            <thead>
+                                <tr>
+                                    <th>ORDER ID</th>
+                                    <th>DATE</th>
+                                    <th>ITEMS</th>
+                                    <th>TOTAL</th>
+                                    <th>STATUS</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="recentOrdersBody">
+
+                                <tr>
+                                    <td colspan="5" class="table-empty">
+
+                                        <i class="fas fa-receipt"></i>
+
+                                        <p>No orders yet.</p>
+
+                                        <a href="menu.html">
+                                            Place your first order
+                                        </a>
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- MY ORDERS TAB -->
+            <section class="dashboard-tab" id="orders">
+
+                <div class="dashboard-section-heading">
+
+                    <div>
+                        <span class="section-subtitle">YOUR PURCHASES</span>
+                        <h2>My Orders</h2>
+
+                        <p>Track and review your food orders.</p>
+                    </div>
+
+                    <a href="menu.html" class="dashboard-action-btn">
+
+                        <i class="fas fa-plus"></i>
+                        New Order
+
+                    </a>
+
+                </div>
+
+
+                <div class="order-filter-bar">
+
+                    <button class="order-filter active"
+                        data-order-filter="all">
+                        All Orders
+                    </button>
+
+                    <button class="order-filter"
+                        data-order-filter="pending">
+                        Pending
+                    </button>
+
+                    <button class="order-filter"
+                        data-order-filter="completed">
+                        Completed
+                    </button>
+
+                    <button class="order-filter"
+                        data-order-filter="cancelled">
+                        Cancelled
+                    </button>
+
+                </div>
+
+
+                <div class="dashboard-table-wrapper">
+
+                    <table class="dashboard-table">
+
+                        <thead>
+                            <tr>
+                                <th>ORDER ID</th>
+                                <th>DATE</th>
+                                <th>ITEMS</th>
+                                <th>TOTAL</th>
+                                <th>STATUS</th>
+                                <th>ACTION</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="allOrdersBody">
+
+                            <tr>
+                                <td colspan="6" class="table-empty">
+
+                                    <i class="fas fa-shopping-bag"></i>
+
+                                    <p>You haven't placed any orders yet.</p>
+
+                                    <a href="menu.html">
+                                        Browse our menu
+                                    </a>
+
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- PROFILE TAB -->
+            <section class="dashboard-tab" id="profile">
+
+                <div class="dashboard-section-heading">
+
+                    <div>
+                        <span class="section-subtitle">ACCOUNT SETTINGS</span>
+                        <h2>My Profile</h2>
+
+                        <p>Manage your personal information.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="profile-layout">
+
+
+                    <!-- PROFILE INFORMATION -->
+                    <div class="profile-card">
+
+                        <div class="profile-card-heading">
+
+                            <h3>Personal Information</h3>
+
+                            <p>Update your account details.</p>
+
+                        </div>
+
+
+                        <form id="profileForm">
+
+                            <div class="profile-avatar-section">
+
+                                <div class="large-profile-avatar"
+                                    id="profileAvatar">
+
+                                    <i class="fas fa-user"></i>
+
+                                </div>
+
+                                <div>
+                                    <h3 id="profileDisplayName">
+                                        Customer
+                                    </h3>
+
+                                    <p>Customer Account</p>
+                                </div>
+
+                            </div>
+
+
+                            <div class="profile-form-grid">
+
+                                <div class="profile-form-group">
+
+                                    <label for="profileName">
+                                        Full Name
+                                    </label>
+
+                                    <input type="text"
+                                        id="profileName"
+                                        placeholder="Your full name"
+                                        required>
+
+                                </div>
+
+
+                                <div class="profile-form-group">
+
+                                    <label for="profileEmail">
+                                        Email Address
+                                    </label>
+
+                                    <input type="email"
+                                        id="profileEmail"
+                                        placeholder="Your email"
+                                        readonly>
+
+                                </div>
+
+
+                                <div class="profile-form-group">
+
+                                    <label for="profilePhone">
+                                        Phone Number
+                                    </label>
+
+                                    <input type="tel"
+                                        id="profilePhone"
+                                        placeholder="Your phone number">
+
+                                </div>
+
+
+                                <div class="profile-form-group">
+
+                                    <label for="profileAddress">
+                                        Delivery Address
+                                    </label>
+
+                                    <input type="text"
+                                        id="profileAddress"
+                                        placeholder="Your delivery address">
+
+                                </div>
+
+                            </div>
+
+
+                            <div id="profileMessage"
+                                class="auth-message"
+                                role="status"
+                                aria-live="polite">
+                            </div>
+
+
+                            <button type="submit"
+                                class="dashboard-save-btn"
+                                id="saveProfileBtn">
+
+                                <i class="fas fa-save"></i>
+
+                                Save Changes
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- ACCOUNT INFORMATION -->
+                    <div class="profile-card account-details-card">
+
+                        <h3>Account Information</h3>
+
+                        <div class="account-detail-row">
+
+                            <span>Account Type</span>
+
+                            <strong>Customer</strong>
+
+                        </div>
+
+
+                        <div class="account-detail-row">
+
+                            <span>Email Verification</span>
+
+                            <strong id="emailVerificationStatus">
+                                Checking...
+                            </strong>
+
+                        </div>
+
+
+                        <div class="account-detail-row">
+
+                            <span>Member Since</span>
+
+                            <strong id="memberSince">
+                                Loading...
+                            </strong>
+
+                        </div>
+
+
+                        <div class="account-detail-row">
+
+                            <span>Account Status</span>
+
+                            <strong class="account-active">
+                                Active
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+        <!-- FOOTER -->
+        <footer class="dashboard-footer">
+
+            <p>
+                &copy; <span id="currentYear"></span>
+                KAS FOOD HOUSE. All Rights Reserved.
+            </p>
+
+            <a href="index.html">
+                Back to Website
+                <i class="fas fa-arrow-right"></i>
+            </a>
+
+        </footer>
+
+    </main>
+
+
+    <!-- NOTIFICATION -->
+    <div class="dashboard-notification" id="dashboardNotification">
+
+        <i class="fas fa-check-circle"></i>
+
+        <span id="dashboardNotificationText">
+            Successfully updated!
+        </span>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="app.js"></script>
+    <script src="animations.js"></script>
+
+    <!-- Dashboard authentication and functionality -->
+    <script type="module" src="js/customer-dashboard.js"></script>
+
+</body>
+
+</html>

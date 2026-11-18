@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GPS Delivery Location | KAS FOOD HOUSE</title>
+
+    <meta name="description"
+        content="Share your delivery location with KAS FOOD HOUSE for convenient food delivery.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animations.css">
+
+    <!-- GPS CSS -->
+    <link rel="stylesheet" href="gps.css">
+
+</head>
+
+<body class="gps-page">
+
+    <!-- =================================
+         HEADER
+    ================================== -->
+
+    <header class="gps-header">
+
+        <div class="gps-header-container">
+
+            <a href="index.html" class="gps-logo">
+
+                <span class="gps-logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </span>
+
+                <span>
+                    KAS <strong>FOOD HOUSE</strong>
+                    <small>FRESH FOOD, HAPPY LIFE</small>
+                </span>
+
+            </a>
+
+            <a href="checkout.html" class="gps-back-link">
+                <i class="fas fa-arrow-left"></i>
+                Back to Checkout
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =================================
+         GPS HERO
+    ================================== -->
+
+    <section class="gps-hero">
+
+        <div class="gps-hero-content">
+
+            <span class="gps-tag">
+                <i class="fas fa-location-dot"></i>
+                DELIVERY LOCATION
+            </span>
+
+            <h1>
+                Where Should We
+                <span>Deliver Your Food?</span>
+            </h1>
+
+            <p>
+                Share your current location so our delivery team
+                can find you easily and bring your favourite meals
+                straight to your doorstep.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         GPS MAIN SECTION
+    ================================== -->
+
+    <main class="gps-main">
+
+        <div class="gps-container">
+
+            <!-- Location Instructions -->
+
+            <div class="gps-instructions">
+
+                <div class="gps-instruction-icon">
+                    <i class="fas fa-shield-halved"></i>
+                </div>
+
+                <div>
+
+                    <h3>Your Location Is Protected</h3>
+
+                    <p>
+                        Your GPS coordinates will only be used to
+                        help arrange your food delivery.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- GPS CONTENT -->
+
+            <div class="gps-grid">
+
+                <!-- LEFT PANEL -->
+
+                <div class="gps-location-panel">
+
+                    <div class="gps-panel-heading">
+
+                        <span class="gps-step">STEP 01</span>
+
+                        <h2>Find Your Location</h2>
+
+                        <p>
+                            Allow your device to access your location.
+                        </p>
+
+                    </div>
+
+
+                    <!-- GPS ICON -->
+
+                    <div class="gps-location-animation">
+
+                        <div class="gps-pulse gps-pulse-one"></div>
+
+                        <div class="gps-pulse gps-pulse-two"></div>
+
+                        <div class="gps-location-circle">
+
+                            <i class="fas fa-location-crosshairs"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- GET LOCATION BUTTON -->
+
+                    <button type="button" id="getGPSLocation"
+                        class="gps-primary-btn">
+
+                        <i class="fas fa-location-arrow"></i>
+
+                        Use My Current Location
+
+                    </button>
+
+
+                    <!-- STATUS -->
+
+                    <div id="gpsStatus" class="gps-status">
+
+                        <i class="fas fa-circle-info"></i>
+
+                        Your location has not been selected yet.
+
+                    </div>
+
+
+                    <!-- LOCATION DETAILS -->
+
+                    <div class="gps-details">
+
+                        <div class="gps-detail-item">
+
+                            <span>
+                                <i class="fas fa-globe"></i>
+                                Latitude
+                            </span>
+
+                            <strong id="gpsLatitude">Not available</strong>
+
+                        </div>
+
+
+                        <div class="gps-detail-item">
+
+                            <span>
+                                <i class="fas fa-globe"></i>
+                                Longitude
+                            </span>
+
+                            <strong id="gpsLongitude">Not available</strong>
+
+                        </div>
+
+
+                        <div class="gps-detail-item">
+
+                            <span>
+                                <i class="fas fa-crosshairs"></i>
+                                Accuracy
+                            </span>
+
+                            <strong id="gpsAccuracy">Not available</strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- COPY LOCATION -->
+
+                    <button type="button" id="copyGPSLocation"
+                        class="gps-secondary-btn" disabled>
+
+                        <i class="fas fa-copy"></i>
+
+                        Copy Coordinates
+
+                    </button>
+
+
+                </div>
+
+
+                <!-- RIGHT PANEL -->
+
+                <div class="gps-map-panel">
+
+                    <div class="gps-map-heading">
+
+                        <div>
+
+                            <span class="gps-step">STEP 02</span>
+
+                            <h2>Your Delivery Map</h2>
+
+                        </div>
+
+                        <span class="gps-live-badge">
+
+                            <i class="fas fa-circle"></i>
+
+                            GPS MAP
+
+                        </span>
+
+                    </div>
+
+
+                    <!-- MAP -->
+
+                    <div class="gps-map-wrapper" id="gpsMapWrapper">
+
+                        <div id="gpsMapPlaceholder" class="gps-map-placeholder">
+
+                            <div class="gps-map-placeholder-icon">
+
+                                <i class="fas fa-map-location-dot"></i>
+
+                            </div>
+
+                            <h3>Your Map Will Appear Here</h3>
+
+                            <p>
+                                Select your current location to display
+                                your position on the map.
+                            </p>
+
+                        </div>
+
+                        <iframe
+                            id="gpsMap"
+                            title="Your delivery location map"
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            hidden>
+                        </iframe>
+
+                    </div>
+
+
+                    <!-- MAP ACTION -->
+
+                    <a href="#" id="openGoogleMaps"
+                        class="gps-map-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        hidden>
+
+                        <i class="fas fa-map-marked-alt"></i>
+
+                        Open Location in Google Maps
+
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+
+                    <!-- ADDRESS FIELD -->
+
+                    <div class="gps-address-section">
+
+                        <label for="gpsDeliveryAddress">
+
+                            <i class="fas fa-house"></i>
+
+                            Additional Delivery Address
+
+                        </label>
+
+                        <textarea
+                            id="gpsDeliveryAddress"
+                            rows="3"
+                            placeholder="Example: Near the main road, opposite the school, blue gate..."></textarea>
+
+                        <small>
+                            Add directions to help our delivery team
+                            find your exact location.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 DELIVERY INFORMATION
+            ================================== -->
+
+            <div class="gps-delivery-info">
+
+                <div class="gps-delivery-icon">
+
+                    <i class="fas fa-motorcycle"></i>
+
+                </div>
+
+                <div class="gps-delivery-text">
+
+                    <h3>Fast & Convenient Food Delivery</h3>
+
+                    <p>
+                        Accurate GPS information helps our delivery
+                        team reach your location more easily.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 GPS ACTIONS
+            ================================== -->
+
+            <div class="gps-actions">
+
+                <a href="checkout.html" class="gps-cancel-btn">
+
+                    <i class="fas fa-arrow-left"></i>
+
+                    Back to Checkout
+
+                </a>
+
+
+                <button type="button" id="saveGPSLocation"
+                    class="gps-save-btn" disabled>
+
+                    Save Location & Continue
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </button>
+
+            </div>
+
+
+            <!-- ERROR MESSAGE -->
+
+            <div id="gpsError" class="gps-error" hidden>
+
+                <i class="fas fa-circle-exclamation"></i>
+
+                <span id="gpsErrorText"></span>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- =================================
+         FOOTER
+    ================================== -->
+
+    <footer class="gps-footer">
+
+        <div class="gps-footer-container">
+
+            <a href="index.html" class="gps-footer-logo">
+
+                <i class="fas fa-utensils"></i>
+
+                KAS FOOD HOUSE
+
+            </a>
+
+            <p>
+                Fresh food. Traditional taste. Happy customers.
+            </p>
+
+            <p class="gps-copyright">
+
+                &copy; <span id="gpsYear"></span>
+                KAS FOOD HOUSE. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =================================
+         GPS NOTIFICATION
+    ================================== -->
+
+    <div id="gpsNotification" class="gps-notification">
+
+        <i class="fas fa-circle-check"></i>
+
+        <span id="gpsNotificationText">
+            Location saved successfully.
+        </span>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="app.js"></script>
+
+    <script src="animations.js"></script>
+
+    <script src="gps.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Traditional Zambian Food | KAS FOOD HOUSE</title>
+
+    <meta name="description"
+        content="Enjoy authentic Zambian traditional food including nshima, village chicken, ifisashi, kapenta, chikanda and more at KAS FOOD HOUSE.">
+
+    <meta name="theme-color" content="#101010">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="responsive.css">
+
+    <link rel="stylesheet" href="animations.css">
+
+    <!-- TRADITIONAL FOOD CSS -->
+    <link rel="stylesheet" href="traditional-food.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         PAGE LOADER
+    =========================================== -->
+
+    <div class="loader" id="loader">
+
+        <div class="loader-content">
+
+            <div class="loader-logo">
+                <span>KAS</span>
+            </div>
+
+            <h2>KAS FOOD HOUSE</h2>
+
+            <p>Preparing traditional goodness...</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         TOP BAR
+    =========================================== -->
+
+    <div class="top-bar">
+
+        <div class="container top-bar-content">
+
+            <p>
+                <i class="fas fa-utensils"></i>
+                Celebrating the Taste of Zambia
+            </p>
+
+            <div class="top-bar-right">
+
+                <span>
+                    <i class="fas fa-heart"></i>
+                    Made With Love
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==========================================
+         NAVIGATION
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="container navbar-container">
+
+            <a href="index.html" class="logo">
+
+                <div class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+
+                <div class="logo-text">
+                    <strong>KAS</strong>
+                    <span>FOOD HOUSE</span>
+                </div>
+
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+
+            <nav class="nav-menu" id="navMenu">
+
+                <a href="index.html">Home</a>
+
+                <a href="menu.html">Our Menu</a>
+
+                <a href="traditional-food.html" class="active">
+                    Traditional Food
+                </a>
+
+                <a href="index.html#about">About Us</a>
+
+                <a href="contact.html">Contact</a>
+
+                <a href="login.html">Login</a>
+
+            </nav>
+
+
+            <a href="cart.html" class="nav-cart">
+
+                <i class="fas fa-shopping-bag"></i>
+
+                <span>Cart</span>
+
+                <span class="cart-count" id="cartCount">0</span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==========================================
+         TRADITIONAL FOOD HERO
+    =========================================== -->
+
+    <section class="traditional-hero">
+
+        <div class="traditional-hero-overlay"></div>
+
+        <div class="traditional-hero-content">
+
+            <span class="traditional-eyebrow">
+
+                <i class="fas fa-leaf"></i>
+
+                AUTHENTIC ZAMBIAN CUISINE
+
+            </span>
+
+
+            <h1>
+
+                The Real Taste
+                <br>
+
+                <span>Of Zambia</span>
+
+            </h1>
+
+
+            <p>
+
+                From nshima and village chicken to
+                ifisashi, kapenta and chikanda.
+                Enjoy the traditional flavours that
+                make every meal feel like home.
+
+            </p>
+
+
+            <div class="traditional-hero-buttons">
+
+                <a href="#traditionalMenu" class="btn-primary">
+
+                    Explore Traditional Food
+
+                    <i class="fas fa-arrow-down"></i>
+
+                </a>
+
+                <a href="menu.html" class="btn-secondary">
+
+                    View Full Menu
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="traditional-hero-stamp">
+
+            <i class="fas fa-heart"></i>
+
+            <strong>PROUDLY</strong>
+
+            <span>ZAMBIAN</span>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         CULTURE STRIP
+    =========================================== -->
+
+    <section class="traditional-culture-strip">
+
+        <div class="container culture-strip-grid">
+
+            <div class="culture-item">
+
+                <i class="fas fa-seedling"></i>
+
+                <div>
+                    <strong>Fresh Ingredients</strong>
+                    <span>Quality ingredients</span>
+                </div>
+
+            </div>
+
+
+            <div class="culture-item">
+
+                <i class="fas fa-fire-burner"></i>
+
+                <div>
+                    <strong>Traditional Flavours</strong>
+                    <span>Inspired by home cooking</span>
+                </div>
+
+            </div>
+
+
+            <div class="culture-item">
+
+                <i class="fas fa-utensils"></i>
+
+                <div>
+                    <strong>Made With Love</strong>
+                    <span>Prepared with care</span>
+                </div>
+
+            </div>
+
+
+            <div class="culture-item">
+
+                <i class="fas fa-flag"></i>
+
+                <div>
+                    <strong>Zambian Heritage</strong>
+                    <span>Celebrating local food</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         TRADITIONAL FOOD INTRODUCTION
+    =========================================== -->
+
+    <section class="traditional-intro">
+
+        <div class="container traditional-intro-container">
+
+            <div class="traditional-intro-content">
+
+                <span class="section-subtitle">
+                    OUR FOOD, OUR CULTURE
+                </span>
+
+                <h2>
+
+                    A Taste Of Home,
+                    <span>A Taste Of Zambia</span>
+
+                </h2>
+
+                <p>
+
+                    Traditional Zambian food is more than
+                    just a meal. It brings families together,
+                    connects generations and celebrates
+                    our culture.
+
+                </p>
+
+                <p>
+
+                    At KAS FOOD HOUSE, we celebrate these
+                    flavours with a selection of traditional
+                    meals inspired by the food we grew up
+                    enjoying.
+
+                </p>
+
+
+                <div class="traditional-intro-stats">
+
+                    <div>
+                        <strong>01</strong>
+                        <span>Local Flavours</span>
+                    </div>
+
+                    <div>
+                        <strong>02</strong>
+                        <span>Traditional Meals</span>
+                    </div>
+
+                    <div>
+                        <strong>03</strong>
+                        <span>Quality Food</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="traditional-intro-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=85"
+                    alt="Traditional food served on a table"
+                    loading="lazy">
+
+                <div class="intro-image-label">
+
+                    <i class="fas fa-heart"></i>
+
+                    The Taste of Home
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         TRADITIONAL FOOD MENU
+    =========================================== -->
+
+    <section class="traditional-menu-section" id="traditionalMenu">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-subtitle">
+                    DISCOVER OUR LOCAL DISHES
+                </span>
+
+                <h2>
+                    Traditional <span>Food Menu</span>
+                </h2>
+
+                <p>
+                    Enjoy delicious meals inspired by
+                    Zambian home cooking.
+                </p>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="traditional-toolbar">
+
+                <div class="traditional-search">
+
+                    <i class="fas fa-search"></i>
+
+                    <input
+                        type="search"
+                        id="traditionalSearch"
+                        placeholder="Search traditional food..."
+                        aria-label="Search traditional food">
+
+                    <button
+                        type="button"
+                        id="clearTraditionalSearch"
+                        aria-label="Clear search">
+
+                        <i class="fas fa-times"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="traditional-sort">
+
+                    <label for="traditionalSort">
+                        Sort by:
+                    </label>
+
+                    <select id="traditionalSort">
+
+                        <option value="default">Recommended</option>
+
+                        <option value="price-low">Lowest Price</option>
+
+                        <option value="price-high">Highest Price</option>
+
+                        <option value="name">Name A-Z</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- CATEGORY FILTERS -->
+
+            <div class="traditional-filters">
+
+                <button
+                    type="button"
+                    class="traditional-filter active"
+                    data-category="traditional">
+
+                    <i class="fas fa-border-all"></i>
+
+                    All Traditional Food
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="traditional-filter"
+                    data-category="traditional">
+
+                    <i class="fas fa-bowl-food"></i>
+
+                    Nshima Meals
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="traditional-filter"
+                    data-category="traditional">
+
+                    <i class="fas fa-drumstick-bite"></i>
+
+                    Chicken & Meat
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="traditional-filter"
+                    data-category="traditional">
+
+                    <i class="fas fa-leaf"></i>
+
+                    Vegetables
+
+                </button>
+
+
+                <button
+                    type="button"
+                    class="traditional-filter"
+                    data-category="traditional">
+
+                    <i class="fas fa-fish"></i>
+
+                    Fish
+
+                </button>
+
+            </div>
+
+
+            <!-- RESULT COUNT -->
+
+            <div class="traditional-results">
+
+                <p>
+                    Our Traditional Collection
+                </p>
+
+                <span id="traditionalResultCount">
+                    Loading meals...
+                </span>
+
+            </div>
+
+
+            <!-- PRODUCT GRID -->
+
+            <div
+                class="traditional-products-grid"
+                id="traditionalProducts">
+
+                <div class="traditional-loading">
+
+                    <div class="traditional-spinner"></div>
+
+                    <p>Loading traditional meals...</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- EMPTY STATE -->
+
+            <div
+                class="traditional-empty"
+                id="traditionalEmpty"
+                hidden>
+
+                <i class="fas fa-bowl-food"></i>
+
+                <h3>No Traditional Food Found</h3>
+
+                <p>
+                    Try searching for another traditional meal.
+                </p>
+
+                <button type="button" id="resetTraditionalFilters">
+
+                    View All Traditional Food
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         ZAMBIAN FOOD CULTURE FEATURE
+    =========================================== -->
+
+    <section class="zambian-culture-section">
+
+        <div class="container zambian-culture-container">
+
+            <div class="zambian-culture-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=85"
+                    alt="Fresh food ingredients"
+                    loading="lazy">
+
+            </div>
+
+
+            <div class="zambian-culture-content">
+
+                <span class="section-subtitle">
+                    OUR HERITAGE, OUR PRIDE
+                </span>
+
+                <h2>
+
+                    Celebrating
+                    <span>Zambian Food Culture</span>
+
+                </h2>
+
+                <p>
+
+                    Every traditional meal tells a story.
+                    From the preparation of nshima to
+                    the different relishes served alongside it,
+                    our food represents family, community
+                    and togetherness.
+
+                </p>
+
+                <p>
+
+                    We are proud to bring these familiar
+                    flavours to your table.
+
+                </p>
+
+
+                <a href="menu.html" class="btn-primary">
+
+                    Discover More Food
+
+                    <i class="fas fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         ORDER CTA
+    =========================================== -->
+
+    <section class="traditional-order-cta">
+
+        <div class="container">
+
+            <span>
+                READY FOR A DELICIOUS MEAL?
+            </span>
+
+            <h2>
+                Bring The Taste Of Home To Your Table.
+            </h2>
+
+            <p>
+                Choose your favourite traditional Zambian meal
+                and enjoy something delicious today.
+            </p>
+
+            <a href="#traditionalMenu" class="btn-primary">
+
+                Order Traditional Food
+
+                <i class="fas fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="logo">
+
+                    <div class="logo-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+
+                    <div class="logo-text">
+                        <strong>KAS</strong>
+                        <span>FOOD HOUSE</span>
+                    </div>
+
+                </a>
+
+                <p>
+                    Celebrating delicious food,
+                    traditional flavours and great moments.
+                </p>
+
+                <div class="footer-socials">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+
+                <a href="menu.html">Our Menu</a>
+
+                <a href="traditional-food.html">Traditional Food</a>
+
+                <a href="cart.html">Shopping Cart</a>
+
+                <a href="contact.html">Contact Us</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Traditional Meals</h3>
+
+                <a href="#traditionalMenu">Nshima Meals</a>
+
+                <a href="#traditionalMenu">Village Chicken</a>
+
+                <a href="#traditionalMenu">Ifisashi</a>
+
+                <a href="#traditionalMenu">Kapenta</a>
+
+                <a href="#traditionalMenu">Chikanda</a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>Customer Support</h3>
+
+                <a href="contact.html">Contact Us</a>
+
+                <a href="login.html">My Account</a>
+
+                <a href="checkout.html">Checkout</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <p>
+                &copy; <span id="currentYear"></span>
+                KAS FOOD HOUSE. All Rights Reserved.
+            </p>
+
+            <p>
+                Made with <i class="fas fa-heart"></i> for food lovers.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==========================================
+         BACK TO TOP
+    =========================================== -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        aria-label="Back to top">
+
+        <i class="fas fa-arrow-up"></i>
+
+    </button>
+
+
+    <!-- ==========================================
+         CART NOTIFICATION
+    =========================================== -->
+
+    <div class="cart-notification" id="cartNotification">
+
+        <i class="fas fa-check-circle"></i>
+
+        <span>Food added to your shopping bag!</span>
+
+    </div>
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+    =========================================== -->
+
+    <script src="products.js"></script>
+
+    <script src="cart.js"></script>
+
+    <script src="traditional-food.js"></script>
+
+    <script src="app.js"></script>
+
+    <script src="animations.js"></script>
+
+</body>
+
+</html>

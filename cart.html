@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="View your shopping bag and order delicious traditional Zambian food and fast food from KAS FOOD HOUSE.">
+
+    <title>My Shopping Bag | KAS FOOD HOUSE</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Website CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animations.css">
+
+    <!-- Cart Page CSS -->
+    <link rel="stylesheet" href="cart.css">
+
+</head>
+
+<body>
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="header">
+
+        <div class="top-bar">
+            <p>
+                <i class="fas fa-fire"></i>
+                Fresh Food. Authentic Taste. Delivered With Love.
+            </p>
+        </div>
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </span>
+
+                <span>
+                    KAS <strong>FOOD HOUSE</strong>
+                </span>
+
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="menu.html">Our Menu</a></li>
+
+                <li><a href="index.html#traditional">Traditional Food</a></li>
+
+                <li><a href="index.html#about">About Us</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+            <div class="nav-actions">
+
+                <a href="cart.html" class="cart-link active">
+
+                    <i class="fas fa-shopping-bag"></i>
+
+                    <span>Bag</span>
+
+                    <span class="cart-count" id="cartCount">0</span>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =====================================
+         CART HERO
+    ====================================== -->
+
+    <section class="cart-hero">
+
+        <div class="cart-hero-content">
+
+            <span class="section-label">
+                <i class="fas fa-shopping-bag"></i>
+                YOUR ORDER
+            </span>
+
+            <h1>
+                My Shopping <span>Bag</span>
+            </h1>
+
+            <p>
+                Your favourite meals are waiting for you.
+                Review your order before checkout.
+            </p>
+
+            <div class="breadcrumb">
+
+                <a href="index.html">Home</a>
+
+                <i class="fas fa-chevron-right"></i>
+
+                <span>Shopping Bag</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================
+         CART SECTION
+    ====================================== -->
+
+    <main class="cart-section">
+
+        <div class="cart-container">
+
+            <!-- CART LEFT SIDE -->
+
+            <div class="cart-main">
+
+                <div class="cart-heading">
+
+                    <div>
+
+                        <span class="section-label">YOUR SELECTION</span>
+
+                        <h2>Order Summary</h2>
+
+                    </div>
+
+                    <span class="cart-items-label">
+
+                        <span id="cartItemCount">0</span> Items
+
+                    </span>
+
+                </div>
+
+
+                <!-- EMPTY CART -->
+
+                <div class="cart-empty" id="cartEmpty">
+
+                    <div class="empty-cart-icon">
+
+                        <i class="fas fa-basket-shopping"></i>
+
+                    </div>
+
+                    <h2>Your shopping bag is empty!</h2>
+
+                    <p>
+                        You haven't added any delicious meals yet.
+                        Explore our menu and find something you love.
+                    </p>
+
+                    <a href="menu.html" class="btn-primary">
+
+                        <i class="fas fa-utensils"></i>
+
+                        Explore Our Menu
+
+                    </a>
+
+                </div>
+
+
+                <!-- CART ITEMS -->
+
+                <div id="cartContent" class="cart-content">
+
+                    <div class="cart-table-header">
+
+                        <span>PRODUCT</span>
+
+                        <span>QUANTITY</span>
+
+                        <span>TOTAL</span>
+
+                    </div>
+
+                    <div id="cartItems" class="cart-items">
+
+                        <!-- Products generated by cart.js -->
+
+                    </div>
+
+
+                    <!-- CART ACTIONS -->
+
+                    <div class="cart-bottom-actions">
+
+                        <a href="menu.html" class="continue-shopping">
+
+                            <i class="fas fa-arrow-left"></i>
+
+                            Continue Shopping
+
+                        </a>
+
+                        <button
+                            type="button"
+                            class="clear-cart-btn"
+                            id="clearCartBtn"
+                        >
+
+                            <i class="fas fa-trash"></i>
+
+                            Clear Bag
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CART RIGHT SIDE -->
+
+            <aside class="cart-sidebar">
+
+                <div class="order-card">
+
+                    <div class="order-card-header">
+
+                        <i class="fas fa-receipt"></i>
+
+                        <h2>Order Summary</h2>
+
+                    </div>
+
+
+                    <div class="order-summary-row">
+
+                        <span>Items</span>
+
+                        <strong id="summaryItemCount">0</strong>
+
+                    </div>
+
+
+                    <div class="order-summary-row">
+
+                        <span>Subtotal</span>
+
+                        <strong id="cartSubtotal">K0.00</strong>
+
+                    </div>
+
+
+                    <div class="order-summary-row">
+
+                        <span>Delivery Fee</span>
+
+                        <strong id="deliveryFee">Calculated at checkout</strong>
+
+                    </div>
+
+
+                    <div class="order-divider"></div>
+
+
+                    <div class="order-total-row">
+
+                        <span>Estimated Total</span>
+
+                        <strong id="cartTotal">K0.00</strong>
+
+                    </div>
+
+
+                    <p class="delivery-note">
+
+                        <i class="fas fa-info-circle"></i>
+
+                        Delivery charges will be confirmed during checkout.
+
+                    </p>
+
+
+                    <a href="checkout.html" class="checkout-btn" id="checkoutBtn">
+
+                        Proceed to Checkout
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+
+                    <div class="secure-order">
+
+                        <i class="fas fa-shield-halved"></i>
+
+                        Secure ordering experience
+
+                    </div>
+
+                </div>
+
+
+                <!-- DELIVERY INFORMATION -->
+
+                <div class="delivery-card">
+
+                    <div class="delivery-icon">
+
+                        <i class="fas fa-motorcycle"></i>
+
+                    </div>
+
+                    <div>
+
+                        <h3>Delivery Available</h3>
+
+                        <p>
+                            Get your favourite meals delivered
+                            straight to your location.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TRADITIONAL FOOD MESSAGE -->
+
+                <div class="traditional-card">
+
+                    <i class="fas fa-bowl-food"></i>
+
+                    <h3>Love Traditional Food?</h3>
+
+                    <p>
+                        Enjoy authentic Zambian meals prepared
+                        with local flavour.
+                    </p>
+
+                    <a href="index.html#traditional">
+
+                        Explore Traditional Meals
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; <span id="currentYear"></span>
+                KAS FOOD HOUSE. All Rights Reserved.
+            </p>
+
+            <p>
+                Made with <i class="fas fa-heart"></i> in Zambia.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- BACK TO TOP -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        aria-label="Back to top"
+    >
+
+        <i class="fas fa-arrow-up"></i>
+
+    </button>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
+
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="app.js"></script>
+    <script src="animations.js"></script>
+
+    <!-- CART PAGE INITIALIZATION -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const clearCartBtn = document.getElementById("clearCartBtn");
+
+            const checkoutBtn = document.getElementById("checkoutBtn");
+
+            const summaryItemCount = document.getElementById("summaryItemCount");
+
+            function updateSummary() {
+
+                if (!window.KAS_FOOD_CART) return;
+
+                const count = window.KAS_FOOD_CART.getTotalItems();
+
+                summaryItemCount.textContent = count;
+
+            }
+
+            updateSummary();
+
+            window.addEventListener("foodCartUpdated", updateSummary);
+
+            if (clearCartBtn) {
+
+                clearCartBtn.addEventListener("click", () => {
+
+                    if (!window.KAS_FOOD_CART) return;
+
+                    const items = window.KAS_FOOD_CART.getItems();
+
+                    if (items.length === 0) return;
+
+                    const confirmed = confirm(
+                        "Are you sure you want to clear your shopping bag?"
+                    );
+
+                    if (confirmed) {
+
+                        window.KAS_FOOD_CART.clear();
+
+                    }
+
+                });
+
+            }
+
+            if (checkoutBtn) {
+
+                checkoutBtn.addEventListener("click", event => {
+
+                    if (!window.KAS_FOOD_CART) return;
+
+                    if (window.KAS_FOOD_CART.getTotalItems() === 0) {
+
+                        event.preventDefault();
+
+                        alert("Your shopping bag is empty. Please add some food first.");
+
+                    }
+
+                });
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

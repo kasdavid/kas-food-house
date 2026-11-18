@@ -1,0 +1,474 @@
+/* =====================================================
+   KAS FOOD HOUSE
+   ADVANCED ANIMATION SYSTEM
+===================================================== */
+
+/* ================= GLOBAL ANIMATION ================= */
+
+:root {
+    --animation-orange: #ff5a1f;
+    --animation-gold: #ffb52e;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* ================= BACKGROUND WORDS ================= */
+
+.background-words {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.background-words span {
+    animation: backgroundWordFloat 18s ease-in-out infinite alternate;
+    will-change: transform;
+}
+
+.background-words span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.background-words span:nth-child(2) {
+    animation-delay: -4s;
+}
+
+.background-words span:nth-child(3) {
+    animation-delay: -8s;
+}
+
+.background-words span:nth-child(4) {
+    animation-delay: -12s;
+}
+
+.background-words span:nth-child(5) {
+    animation-delay: -16s;
+}
+
+@keyframes backgroundWordFloat {
+    0% {
+        transform: translate3d(-3%, 0, 0) rotate(-20deg);
+    }
+
+    50% {
+        transform: translate3d(3%, -20px, 0) rotate(-17deg);
+    }
+
+    100% {
+        transform: translate3d(-2%, 20px, 0) rotate(-22deg);
+    }
+}
+
+/* ================= HERO ENTRANCE ================= */
+
+.hero-label {
+    animation: fadeDown 1s ease both;
+}
+
+.hero h1 {
+    animation: fadeUp 1s 0.15s ease both;
+}
+
+.hero-content > p {
+    animation: fadeUp 1s 0.3s ease both;
+}
+
+.hero-buttons {
+    animation: fadeUp 1s 0.45s ease both;
+}
+
+.hero-features {
+    animation: fadeUp 1s 0.6s ease both;
+}
+
+.hero-image {
+    animation: heroImageEntrance 1.2s 0.2s ease both;
+}
+
+@keyframes heroImageEntrance {
+    from {
+        opacity: 0;
+        transform: translateX(70px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* ================= HERO IMAGE FLOAT ================= */
+
+.hero-image > img {
+    animation: foodFloating 6s ease-in-out infinite;
+}
+
+@keyframes foodFloating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.hero-floating-card {
+    animation: floatingCard 4s ease-in-out infinite;
+}
+
+@keyframes floatingCard {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-13px);
+    }
+}
+
+.hero-discount {
+    animation: discountPulse 3s ease-in-out infinite;
+}
+
+@keyframes discountPulse {
+    0%, 100% {
+        box-shadow: 0 0 0 rgba(255,90,31,0.2);
+    }
+
+    50% {
+        box-shadow: 0 0 35px rgba(255,90,31,0.6);
+    }
+}
+
+/* ================= MARQUEE ================= */
+
+.marquee-track {
+    animation: marqueeMove 25s linear infinite;
+}
+
+.marquee-section:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+/* ================= BUTTON ANIMATIONS ================= */
+
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(
+        110deg,
+        transparent,
+        rgba(255,255,255,0.35),
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: left 0.7s ease;
+    z-index: -1;
+}
+
+.btn-primary:hover::before {
+    left: 140%;
+}
+
+.btn-primary:hover {
+    animation: buttonGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes buttonGlow {
+    from {
+        box-shadow: 0 5px 20px rgba(255,90,31,0.25);
+    }
+
+    to {
+        box-shadow: 0 5px 35px rgba(255,90,31,0.6);
+    }
+}
+
+/* ================= CATEGORY CARDS ================= */
+
+.category-card {
+    animation: cardAppear 0.8s ease both;
+    transform-origin: center;
+}
+
+.category-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.category-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.category-card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ================= FOOD CARD ANIMATIONS ================= */
+
+.food-card {
+    transform: translateY(0);
+    transition:
+        transform 0.45s ease,
+        box-shadow 0.45s ease,
+        border-color 0.45s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-12px);
+}
+
+.food-card:hover .food-image img {
+    transform: scale(1.12) rotate(1deg);
+}
+
+.food-order-btn {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.food-order-btn:hover {
+    transform: rotate(-45deg) scale(1.1);
+    box-shadow: 0 0 20px rgba(255,90,31,0.5);
+}
+
+/* ================= POPULAR FOOD ================= */
+
+.popular-card {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.popular-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 50px rgba(255,90,31,0.12);
+}
+
+.popular-card img {
+    transition: transform 0.7s ease;
+}
+
+.popular-card:hover img {
+    transform: scale(1.08);
+}
+
+/* ================= PROMO IMAGE ================= */
+
+.promo-image {
+    animation: promoFloat 7s ease-in-out infinite;
+}
+
+@keyframes promoFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ================= ABOUT IMAGE ================= */
+
+.about-image > img {
+    transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+.about-image:hover > img {
+    transform: scale(1.025);
+    filter: brightness(1.1);
+}
+
+.about-experience {
+    animation: experienceFloat 4s ease-in-out infinite;
+}
+
+@keyframes experienceFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* ================= SOCIAL ICONS ================= */
+
+.social-links a {
+    position: relative;
+    overflow: hidden;
+}
+
+.social-links a:hover {
+    transform: translateY(-6px) rotate(5deg);
+    box-shadow: 0 8px 20px rgba(255,90,31,0.25);
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp-float {
+    animation: whatsappPulse 2.5s infinite;
+}
+
+@keyframes whatsappPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37,211,102,0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37,211,102,0);
+    }
+}
+
+/* ================= BACK TO TOP ================= */
+
+.back-to-top {
+    transition: all 0.4s ease;
+}
+
+.back-to-top:hover {
+    transform: translateY(-7px) rotate(360deg);
+}
+
+/* ================= SECTION REVEAL ================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(45px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.9s ease;
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.9s ease;
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.85);
+    transition: all 0.8s ease;
+}
+
+.reveal-scale.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ================= KEYFRAME ANIMATIONS ================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= ANIMATION PERFORMANCE ================= */
+
+.hero-image img,
+.category-card img,
+.food-card img,
+.popular-card img {
+    backface-visibility: hidden;
+}
+
+/* ================= REDUCED MOTION ================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale {
+        opacity: 1;
+        transform: none;
+    }
+
+}

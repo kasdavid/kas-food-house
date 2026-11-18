@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Complete your food order at KAS FOOD HOUSE. Choose delivery or collection and enjoy delicious Zambian food.">
+
+    <title>Checkout | KAS FOOD HOUSE</title>
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="checkout.css">
+
+</head>
+
+<body>
+
+
+    <!-- =====================================
+         HEADER
+    ====================================== -->
+
+    <header class="header">
+
+        <div class="top-bar">
+
+            <p>
+                <i class="fas fa-fire"></i>
+                Fresh Food. Authentic Taste. Delivered With Love.
+            </p>
+
+        </div>
+
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+
+                <span class="logo-icon">
+                    <i class="fas fa-utensils"></i>
+                </span>
+
+                <span>
+                    KAS <strong>FOOD HOUSE</strong>
+                </span>
+
+            </a>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+
+            <ul class="nav-menu" id="navMenu">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="menu.html">Our Menu</a></li>
+
+                <li><a href="index.html#traditional">Traditional Food</a></li>
+
+                <li><a href="index.html#about">About Us</a></li>
+
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+
+            <div class="nav-actions">
+
+                <a href="cart.html" class="cart-link">
+
+                    <i class="fas fa-shopping-bag"></i>
+
+                    <span>Bag</span>
+
+                    <span class="cart-count" id="cartCount">0</span>
+
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================
+         CHECKOUT HERO
+    ====================================== -->
+
+    <section class="checkout-hero">
+
+        <div class="checkout-hero-content">
+
+            <span class="section-label">
+                <i class="fas fa-lock"></i>
+                SECURE CHECKOUT
+            </span>
+
+            <h1>
+                Complete Your <span>Order</span>
+            </h1>
+
+            <p>
+                Just a few more details before we prepare your delicious meal.
+            </p>
+
+            <div class="checkout-breadcrumb">
+
+                <a href="index.html">Home</a>
+
+                <i class="fas fa-chevron-right"></i>
+
+                <a href="cart.html">Shopping Bag</a>
+
+                <i class="fas fa-chevron-right"></i>
+
+                <span>Checkout</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         CHECKOUT SECTION
+    ====================================== -->
+
+    <main class="checkout-section">
+
+        <div class="checkout-container">
+
+
+            <!-- LEFT: CUSTOMER INFORMATION -->
+
+            <div class="checkout-main">
+
+                <form id="checkoutForm">
+
+
+                    <!-- CUSTOMER DETAILS -->
+
+                    <section class="checkout-card">
+
+                        <div class="checkout-card-heading">
+
+                            <span class="checkout-step">01</span>
+
+                            <div>
+
+                                <h2>Customer Information</h2>
+
+                                <p>Tell us who is placing this order.</p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="checkout-form-grid">
+
+                            <div class="form-group">
+
+                                <label for="customerName">
+                                    Full Name *
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="customerName"
+                                    name="customerName"
+                                    placeholder="Enter your full name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="customerPhone">
+                                    Phone Number *
+                                </label>
+
+                                <div class="phone-input">
+
+                                    <span>+260</span>
+
+                                    <input
+                                        type="tel"
+                                        id="customerPhone"
+                                        name="customerPhone"
+                                        placeholder="97XXXXXXX"
+                                        inputmode="numeric"
+                                        pattern="[0-9]{9}"
+                                        maxlength="9"
+                                        autocomplete="tel-national"
+                                        required
+                                    >
+
+                                </div>
+
+                                <small>Enter your 9-digit Zambian mobile number.</small>
+
+                            </div>
+
+
+                            <div class="form-group full-width">
+
+                                <label for="customerEmail">
+                                    Email Address (Optional)
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="customerEmail"
+                                    name="customerEmail"
+                                    placeholder="example@email.com"
+                                    autocomplete="email"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- DELIVERY METHOD -->
+
+                    <section class="checkout-card">
+
+                        <div class="checkout-card-heading">
+
+                            <span class="checkout-step">02</span>
+
+                            <div>
+
+                                <h2>Delivery Method</h2>
+
+                                <p>How would you like to receive your food?</p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="delivery-options">
+
+
+                            <label class="delivery-option selected">
+
+                                <input
+                                    type="radio"
+                                    name="deliveryMethod"
+                                    value="delivery"
+                                    checked
+                                >
+
+                                <span class="delivery-option-icon">
+
+                                    <i class="fas fa-motorcycle"></i>
+
+                                </span>
+
+                                <span class="delivery-option-info">
+
+                                    <strong>Home Delivery</strong>
+
+                                    <small>Get your food delivered to you.</small>
+
+                                </span>
+
+                            </label>
+
+
+                            <label class="delivery-option">
+
+                                <input
+                                    type="radio"
+                                    name="deliveryMethod"
+                                    value="collection"
+                                >
+
+                                <span class="delivery-option-icon">
+
+                                    <i class="fas fa-store"></i>
+
+                                </span>
+
+                                <span class="delivery-option-info">
+
+                                    <strong>Restaurant Collection</strong>
+
+                                    <small>Pick up your order yourself.</small>
+
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+
+                        <!-- DELIVERY ADDRESS -->
+
+                        <div id="deliveryAddressSection">
+
+                            <div class="form-group">
+
+                                <label for="deliveryAddress">
+                                    Delivery Address *
+                                </label>
+
+                                <textarea
+                                    id="deliveryAddress"
+                                    name="deliveryAddress"
+                                    rows="3"
+                                    placeholder="House number, street, area, town..."
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <div class="checkout-form-grid">
+
+                                <div class="form-group">
+
+                                    <label for="deliveryTown">
+                                        Town / City *
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="deliveryTown"
+                                        name="deliveryTown"
+                                        placeholder="e.g. Lusaka"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="deliveryArea">
+                                        Residential Area
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="deliveryArea"
+                                        name="deliveryArea"
+                                        placeholder="e.g. Chalala"
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- GPS LOCATION -->
+
+                            <div class="gps-box">
+
+                                <div class="gps-icon">
+
+                                    <i class="fas fa-location-crosshairs"></i>
+
+                                </div>
+
+                                <div class="gps-content">
+
+                                    <h3>Share Your GPS Location</h3>
+
+                                    <p>
+                                        Help our delivery team find your location easily.
+                                    </p>
+
+                                    <button
+                                        type="button"
+                                        id="getLocationBtn"
+                                        class="gps-button"
+                                    >
+
+                                        <i class="fas fa-location-dot"></i>
+
+                                        Use My Current Location
+
+                                    </button>
+
+                                    <p id="locationStatus" class="location-status" aria-live="polite"></p>
+
+                                </div>
+
+                            </div>
+
+                            <input type="hidden" id="latitude" name="latitude">
+
+                            <input type="hidden" id="longitude" name="longitude">
+
+                        </div>
+
+
+
+                        <!-- COLLECTION MESSAGE -->
+
+                        <div id="collectionMessage" class="collection-message" hidden>
+
+                            <i class="fas fa-store"></i>
+
+                            <div>
+
+                                <strong>Restaurant Collection</strong>
+
+                                <p>
+                                    You will collect your order from our restaurant.
+                                    Collection instructions will be confirmed with you.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group special-instructions">
+
+                            <label for="orderInstructions">
+                                Special Instructions (Optional)
+                            </label>
+
+                            <textarea
+                                id="orderInstructions"
+                                name="orderInstructions"
+                                rows="3"
+                                placeholder="Example: Please call when you arrive. Food should be less spicy..."
+                            ></textarea>
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- PAYMENT METHOD -->
+
+                    <section class="checkout-card">
+
+                        <div class="checkout-card-heading">
+
+                            <span class="checkout-step">03</span>
+
+                            <div>
+
+                                <h2>Payment Method</h2>
+
+                                <p>Select your preferred payment method.</p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="payment-options">
+
+
+                            <label class="payment-option selected">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="cash"
+                                    checked
+                                >
+
+                                <span class="payment-icon">
+
+                                    <i class="fas fa-money-bill-wave"></i>
+
+                                </span>
+
+                                <span>
+
+                                    <strong>Cash on Delivery / Collection</strong>
+
+                                    <small>Pay when receiving your food.</small>
+
+                                </span>
+
+                            </label>
+
+
+                            <label class="payment-option">
+
+                                <input
+                                    type="radio"
+                                    name="paymentMethod"
+                                    value="mobile_money"
+                                >
+
+                                <span class="payment-icon">
+
+                                    <i class="fas fa-mobile-screen-button"></i>
+
+                                </span>
+
+                                <span>
+
+                                    <strong>Mobile Money</strong>
+
+                                    <small>Payment instructions will be confirmed.</small>
+
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <div id="mobileMoneyInfo" class="payment-info" hidden>
+
+                            <i class="fas fa-info-circle"></i>
+
+                            Mobile Money payment details will be provided by the restaurant before payment.
+
+                        </div>
+
+                    </section>
+
+
+
+                    <!-- CUSTOMER AGREEMENT -->
+
+                    <div class="checkout-agreement">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="termsAgreement"
+                                required
+                            >
+
+                            <span>
+                                I confirm that my contact and delivery information is correct.
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+                    <p id="checkoutError" class="checkout-error" role="alert"></p>
+
+
+                    <button type="submit" class="place-order-btn" id="placeOrderBtn">
+
+                        <span>
+                            <i class="fas fa-check-circle"></i>
+                            Place My Order
+                        </span>
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <a href="cart.html" class="back-to-cart">
+
+                        <i class="fas fa-arrow-left"></i>
+
+                        Return to Shopping Bag
+
+                    </a>
+
+
+                </form>
+
+            </div>
+
+
+
+            <!-- RIGHT: ORDER SUMMARY -->
+
+            <aside class="checkout-sidebar">
+
+                <div class="checkout-summary-card">
+
+                    <div class="summary-heading">
+
+                        <i class="fas fa-receipt"></i>
+
+                        <h2>Your Order</h2>
+
+                    </div>
+
+
+                    <div id="checkoutOrderItems" class="checkout-order-items">
+
+                        <!-- Cart items generated by checkout.js -->
+
+                    </div>
+
+
+                    <div class="summary-divider"></div>
+
+
+                    <div class="summary-row">
+
+                        <span>Items</span>
+
+                        <strong id="checkoutItemCount">0</strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>Subtotal</span>
+
+                        <strong id="checkoutSubtotal">K0.00</strong>
+
+                    </div>
+
+
+                    <div class="summary-row">
+
+                        <span>Delivery Fee</span>
+
+                        <strong id="checkoutDeliveryFee">To be confirmed</strong>
+
+                    </div>
+
+
+                    <div class="summary-divider"></div>
+
+
+                    <div class="summary-total">
+
+                        <span>Total</span>
+
+                        <strong id="checkoutTotal">K0.00</strong>
+
+                    </div>
+
+
+                    <div class="summary-security">
+
+                        <i class="fas fa-shield-halved"></i>
+
+                        Your order information is protected.
+
+                    </div>
+
+                </div>
+
+
+                <!-- SUPPORT -->
+
+                <div class="checkout-support">
+
+                    <i class="fas fa-headset"></i>
+
+                    <div>
+
+                        <h3>Need Help?</h3>
+
+                        <p>
+                            Contact our team if you need assistance with your order.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; <span id="currentYear"></span>
+                KAS FOOD HOUSE. All Rights Reserved.
+            </p>
+
+            <p>
+                Made with <i class="fas fa-heart"></i> in Zambia.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- BACK TO TOP -->
+
+    <button
+        class="back-to-top"
+        id="backToTop"
+        aria-label="Back to top"
+    >
+
+        <i class="fas fa-arrow-up"></i>
+
+    </button>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script src="app.js"></script>
+    <script src="animations.js"></script>
+    <script src="checkout.js"></script>
+
+</body>
+
+</html>
